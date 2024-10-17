@@ -1,0 +1,36 @@
+.textContent {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.yellow {
+  color: var(--color-yellow);
+}
+
+.red-accent-2 {
+  color: var(--color-red-accent-2);
+}
+
+.black {
+  color: var(--c6);
+}
+
+.medium {
+  font-size: 1.25rem;
+}
+
+.small {
+  font-size: 1rem;
+  opacity: 65%;
+  font-weight: 400;
+}
+
+.smaller {
+  font-size: 1rem;
+  opacity: 65%;
+  font-weight: 400;
+}
+
+.maxCharacters {
+  max-width: 40ch
+}

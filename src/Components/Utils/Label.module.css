@@ -1,0 +1,59 @@
+.label {
+  border-radius: 0.75rem;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.red-reverse {
+  color: var(--color-red);
+  background-color: var(--color-red-accent);
+}
+
+.red {
+  background-color: var(--color-red);
+  color: var(--color-red-accent);
+}
+
+.red-white {
+  background-color: var(--color-red);
+  color: var(--c1);
+}
+
+.red-accent {
+  background-color: var(--color-red-accent);
+  color: var(--c5);
+}
+
+.white {
+  background-color: var(--c1);
+  color: var(--c5);
+}
+
+.blue {
+  background-color: var(--color-blue);
+  color: var(--color-blue-accent);
+}
+
+.orange {
+  background-color: var(--color-orange);
+  color: var(--color-orange-accent);
+}
+
+.yellow {
+  background-color: var(--color-yellow);
+  color: var(--color-yellow-accent);
+}
+
+.yellow-brown {
+  background-color: var(--color-yellow);
+  color: var(--color-brown);
+}
+
+.yellow-white {
+  background-color: var(--color-yellow);
+  color: var(--c1);
+}
+
+

@@ -1,0 +1,39 @@
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.casaAmarela {
+  display: flex;
+  gap: 3.5rem;
+  padding: 0 6rem;
+}
+
+.casaAmarelaImg img{
+  border-radius: 4.75rem;
+  position: relative;
+}
+
+.casaAmarelaImg svg{
+  position: absolute;
+  top: -4.5rem;
+  left: -7rem;
+}
+
+.casaAmarelaInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.casaAmarelaEstatisticas {
+  padding: 0 6rem;
+}
+
+.casaAmarelaEstatisticas svg {
+  padding: 0;
+}

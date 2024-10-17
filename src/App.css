@@ -1,0 +1,56 @@
+@import url('https://fonts.cdnfonts.com/css/futura-std-4?styles=52567,52583');
+@import url('https://fonts.cdnfonts.com/css/league-gothic?styles=29994');@import url('https://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98776');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  
+  --type-first: 'Futura Std', sans-serif;
+  --type-second: 'League Gothic';
+  --type-third: 'SF Pro Display', , sans-serif;;
+  font-family: var(--type-first);
+
+  --color-yellow: #DBA73E;
+  --color-yellow-accent: #1E1E1E;
+  --color-orange: #FF9933;
+  --color-orange-accent: #E47043;
+  --color-red: #884129;
+  --color-red-accent: #F3D7BE;
+  --color-red-accent-2: #F5ECDF;
+  --color-green: #898C64;
+  --color-green-accent: #FFF;
+  --color-blue: #A7BDD1;
+  --color-blue-accent: #8A8C64;
+  --color-brown: #210600;
+
+  --c1: #FFF;
+  --c5: #1E1E1E;
+  --c6: #000;
+  color: var(--c1);
+  background-color: #F5ECDF;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button, input {
+  display: block;
+  font-size: 1rem;
+  font-style: var(--type-first);
+}
+
+.container {
+  max-width: 100rem;
+  padding: 0.25rem 1rem;
+  margin: 0 auto;
+}
