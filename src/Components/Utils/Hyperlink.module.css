@@ -1,0 +1,28 @@
+.hyperlink {
+  font-family: var(--type-thirt);
+  font-size: 0.75rem;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.green {
+  color: var(--color-green);
+}
+
+.redAccent3 {
+  color: var(--color-red-accent-3);
+}
+
+.orange {
+  color: var(--color-orange);
+}
+
+.arrowOrange path {
+  fill: var(--color-orange);
+}
+
+.arrowGreen path {
+  fill: var(--color-green)
+}

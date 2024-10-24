@@ -1,0 +1,44 @@
+.speechBalloon {
+  cursor: pointer;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  align-items: center;
+  -webkit-box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.25);
+}
+
+.speechBalloon:after {
+  width: 1rem;
+  height: 1rem;
+  bottom: -0.75rem;
+  position: absolute;
+  left: 44%;
+  content: '';
+  -webkit-mask: url("src/Assets/arrow_down_speech_balloon.svg") no-repeat 50% 50%;
+  mask: url("src/Assets/arrow_down_speech_balloon.svg") no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+
+}
+
+.speechBalloon.selected:after {
+  background-color: var(--color-red);
+}
+
+.speechBalloon.unselected:after {
+  background-color: var(--c1);
+}
+
+.selected {
+  background-color: var(--color-red);
+  color: var(--color-red-accent);
+}
+
+.unselected {
+  background-color: var(--c1);
+  color: var(--color-red);
+}

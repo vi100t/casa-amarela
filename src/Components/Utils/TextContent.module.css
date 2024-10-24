@@ -7,8 +7,12 @@
   color: var(--color-yellow);
 }
 
-.red-accent-2 {
+.redAccent2 {
   color: var(--color-red-accent-2);
+}
+
+.redAccent3{
+  color: var(--color-red-accent-3);
 }
 
 .black {
@@ -31,6 +35,10 @@
   font-weight: 400;
 }
 
-.maxCharacters {
+.maxCharacters40 {
   max-width: 40ch
+}
+
+.maxCharacters30 {
+  max-width: 30ch
 }
