@@ -39,6 +39,7 @@ const Footer = () => {
           icon={WhatsAppIcon}
           size="small"
           border="square"
+          clickable="clickable"
         />
         <Label
           label="Instagram"
@@ -46,6 +47,7 @@ const Footer = () => {
           icon={InstagramIcon}
           size="small"
           border="square"
+          clickable="clickable"
         />
         <Label
           label="Twitter"
@@ -53,6 +55,7 @@ const Footer = () => {
           icon={TwitterIcon}
           size="small"
           border="square"
+          clickable="clickable"
         />
       </div>
     </div>

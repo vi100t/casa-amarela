@@ -47,6 +47,7 @@
   gap: 3.5rem;
   padding: 3rem 6rem;
   background-color: var(--color-red);
+  align-items: center;
 }
 
 .hospitalityTitle {
@@ -152,6 +153,13 @@
 .eventsImg {
   position: absolute;
   bottom: -2%;
+  right: 2%;
+}
+
+.eventsImgMobile {
+  display: none;
+  position: absolute;
+  bottom: -2%;
 }
 
 .yellowFilme {
@@ -225,6 +233,10 @@
     content: url("/src/Assets/hospitality_map_mobile.svg");
   }
 
+  .casaBaete, .casaBruxa, .casaCaju, .casaCamua, .casaDecker, .casaRio, .casaSal {
+    display: none;
+  }
+
   .cardReserva {
     width: 100%;
     padding: 0.5rem;
@@ -274,24 +286,309 @@
   .eventsSpace {
     display: none;
   }
+
+  .events {
+    display: flex;
+    padding: 3rem 1rem;
+    max-width: 100%;
+    align-items: flex-start;
+    margin-top: 3rem;
+  }
+
+  .eventsImg {
+    display: none;
+  }
+
+  .eventsImgMobile {
+    display: block;
+    max-width: 100%;
+    right: 5%;
+    bottom: 0;
+  }
+
+  .yellowFilme {
+    flex-direction: column-reverse;
+    background-color: var(--color-orange-accent);
+    background-image: none;
+    padding: 3rem 1rem;
+    gap: 3rem;
+  }
+
+  .yellowFilmeImg svg {
+    width: 100%;
+    height: min-content;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .casaAmarela {
+    flex-direction: column-reverse;
+    padding: 0rem 3rem;
+    gap: 2rem;
+  }
+
+  .casaAmarela img {
+    border-radius: 1rem;
+    margin-top: 2rem;
+  }
+
+  .casaAmarelaInfo {
+    align-items: center
+  }
+
+  .casaAmarelaBarrinha{
+    position: absolute;
+    top: -5rem;
+    left: -3rem;
+    width: 15rem;
+  }
+
+  .casaAmarelaEstatisticas {
+    width: 100%;
+    height: auto;
+    padding: 0rem 3rem;
+  }
+
+  .hospitality {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 3rem;
+  }
+  .hospitalityTitle {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hospitalityRoom svg {
+    max-width: 100%;
+    height: min-content;
+    padding: 2rem 0rem
+  }
+
+  .housesMap {
+    content: url("/src/Assets/hospitality_map_mobile.svg");
+  }
+
+  .casaBaete, .casaBruxa, .casaCaju, .casaCamua, .casaDecker, .casaRio, .casaSal {
+    display: none;
+  }
+
+  .cardReserva {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardReservaMobile {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .cardButtons {
+    display: block;
+  }
+
+  .piawood {
+    flex-direction: column-reverse;
+    padding: 1rem 3rem;
+  }
+
+  .piawoodImg svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .piaWoodEstatisticas {
+    display: flex;
+    padding: 0rem 3rem;
+    max-width: 100%;
+  }
+
+  .piaWoodEstatisticas svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .eventsSpace {
+    display: none;
+  }
+
+  .events {
+    display: flex;
+    padding: 3rem 1rem;
+    max-width: 100%;
+    align-items: flex-start;
+    margin-top: 3rem;
+  }
+
+  .eventsImg {
+    display: none;
+  }
+
+  .eventsImgMobile {
+    display: block;
+    max-width: 100%;
+    right: 5%;
+    bottom: 0;
+  }
+
+  .yellowFilme {
+    flex-direction: column-reverse;
+    background-color: var(--color-orange-accent);
+    background-image: none;
+    padding: 3rem 1rem;
+    gap: 3rem;
+  }
+
+  .yellowFilmeImg svg {
+    width: 100%;
+    height: min-content;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  
-}
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .casaAmarela {
+    flex-direction: column-reverse;
+    padding: 0rem 3rem;
+    gap: 2rem;
+  }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  
-}
+  .casaAmarela img {
+    border-radius: 1rem;
+    margin-top: 2rem;
+  }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  
+  .casaAmarelaInfo {
+    align-items: center
+  }
+
+  .casaAmarelaBarrinha{
+    position: absolute;
+    top: -5rem;
+    left: -3rem;
+    width: 15rem;
+  }
+
+  .casaAmarelaEstatisticas {
+    width: 100%;
+    height: auto;
+    padding: 0rem 3rem;
+  }
+
+  .hospitality {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 3rem;
+  }
+  .hospitalityTitle {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hospitalityRoom svg {
+    max-width: 100%;
+    height: min-content;
+    padding: 2rem 0rem
+  }
+
+  .housesMap {
+    content: url("/src/Assets/hospitality_map_mobile.svg");
+  }
+
+  .casaBaete, .casaBruxa, .casaCaju, .casaCamua, .casaDecker, .casaRio, .casaSal {
+    display: none;
+  }
+
+  .cardReserva {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardReservaMobile {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .cardButtons {
+    display: block;
+  }
+
+  .piawood {
+    flex-direction: column-reverse;
+    padding: 1rem 3rem;
+    align-items: center;
+  }
+
+  .piawoodImg svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .piaWoodEstatisticas {
+    display: flex;
+    padding: 0rem 3rem;
+    max-width: 100%;
+  }
+
+  .piaWoodEstatisticas svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .eventsSpace {
+    display: none;
+  }
+
+  .events {
+    display: flex;
+    padding: 3rem 1rem;
+    max-width: 100%;
+    align-items: flex-start;
+    margin-top: 3rem;
+  }
+
+  .eventsImg {
+    display: block;
+    width: 100%;
+  }
+
+  .eventsImgMobile {
+    display: none;
+  }
+
+  .yellowFilme {
+    flex-direction: column-reverse;
+    background-color: var(--color-orange-accent);
+    background-image: none;
+    padding: 3rem 1rem;
+    gap: 3rem;
+  }
+
+  .yellowFilmeImg svg {
+    width: 100%;
+    height: min-content;
+  }
 }

@@ -151,9 +151,12 @@ const Home = () => {
         <div className={styles.eventsImg}>
           <EventsImg />
         </div>
+        <div className={styles.eventsImgMobile}>
+          <img src="src/Assets/events_img_mobile.png" alt="Eventos" />
+        </div>
       </div>
       <div className={styles.yellowFilme}>
-        <div>
+        <div className={styles.yellowFilmeImg}>
           <LogoSea />
         </div>
         <div className={styles.casaAmarelaInfo}>

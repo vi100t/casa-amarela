@@ -24,6 +24,10 @@
   color: var(--color-green);
 }
 
+.brown {
+  color: var(--color-brown);
+}
+
 .bigger {
   font-size: 6rem;
 }
