@@ -42,3 +42,21 @@
 .maxCharacters30 {
   max-width: 30ch
 }
+
+@media only screen and (max-width: 600px) {
+  .textContent {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .black {
+    opacity: 60%;
+  }
+  .maxCharacters30 {
+    max-width: 100%;
+    text-align: center;
+  }
+  .maxCharacters40 {
+    max-width: 100%;
+    text-align: center;
+  }
+}

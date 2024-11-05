@@ -5,7 +5,7 @@ import Button from './Button';
 import CirclePlus from '../../Assets/circle_plus.svg?react';
 import Waves from '../../Assets/waves.svg?react';
 import LocationPin from '../../Assets/location_pin.svg?react';
-import LogoLabelRed from '../../Assets/logo_label_red.svg?react';
+import LogoLabelRed from '../../Assets/logo_label_red_sm.svg?react';
 import LogoLabelRedAccent from '../../Assets/logo_label_red_accent.svg?react';
 
 const Card = () => {
@@ -20,7 +20,7 @@ const Card = () => {
         />
         <Label
           size="small"
-          type="reverse-red"
+          type="red-reverse"
           label="Casa Rio"
           icon={LogoLabelRed}
         />
@@ -36,14 +36,22 @@ const Card = () => {
             type="white"
             label="Barrinha"
             icon={LocationPin}
+            multiple="multiple"
           />
           <Label
             size="small"
             type="white"
             label="Visite a maré alta"
             icon={Waves}
+            multiple="multiple"
           />
-          <Label size="small" type="white" icon={CirclePlus} iconOnly={true} />
+          <Label
+            size="small"
+            type="white"
+            icon={CirclePlus}
+            iconOnly={true}
+            multiple="multiple"
+          />
         </div>
       </div>
       <Button label="Reservar" type="red" />

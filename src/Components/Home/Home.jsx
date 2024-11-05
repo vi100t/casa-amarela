@@ -4,7 +4,6 @@ import Header from '../Utils/Header';
 import Divider from '../Utils/Divider';
 import Barrinha from '../../Assets/barrinha.svg?react';
 import CasaAmarelaEstatistica from '../../Assets/casa_amarela_estatistica.svg?react';
-import PiawoodEstatistica from '../../Assets/piawood_estatistica.svg?react';
 import HospitalityRoom from '../../Assets/hospitality_room.svg?react';
 import PalmTrees from '../../Assets/palm_trees.svg?react';
 import EventsImg from '../../Assets/events_img.svg?react';
@@ -12,6 +11,8 @@ import LogoSea from '../../Assets/logo_sea.svg?react';
 import LogoLabelRed from '../../Assets/logo_label_red.svg?react';
 import LogoLabelGreen from '../../Assets/logo_label_green.svg?react';
 import LogoLabelOrange from '../../Assets/logo_label_orange.svg?react';
+import CardButtonRight from '../../Assets/right_arrow_card.svg?react';
+import CardButtonLeft from '../../Assets/left_arrow_card.svg?react';
 import TextContent from '../Utils/TextContent';
 import Carousel from '../Utils/Carousel';
 import Title from '../Utils/Title';
@@ -25,7 +26,7 @@ import Footer from '../Utils/Footer';
 const Home = () => {
   return (
     <div className={`${styles.home} container`}>
-      <Header></Header>
+      <Header className={styles.header}></Header>
 
       <img src="src/Assets/home_1.png" alt="Quarto" />
 
@@ -69,12 +70,16 @@ const Home = () => {
             href="/Hospitality"
           />
         </div>
-        <div>
+        <div className={styles.hospitalityRoom}>
           <HospitalityRoom />
         </div>
       </div>
       <div className={styles.houses}>
-        <img src="src/Assets/hospitality_map.png" alt="Mapa de estadias" />
+        <img
+          className={styles.housesMap}
+          src="src/Assets/hospitality_map.png"
+          alt="Mapa de estadias"
+        />
         <div className={styles.casaRio}>
           <SpeechBalloon label="Casa Rio" state="selected" />
         </div>
@@ -100,12 +105,16 @@ const Home = () => {
           <SpeechBalloon label="Casa da Bruxa" state="unselected" />
         </div>
         <div className={styles.cardReserva}>
-          <Card />
+          <div className={styles.cardReservaMobile}>
+            <CardButtonLeft className={styles.cardButtons} />
+            <Card />
+            <CardButtonRight className={styles.cardButtons} />
+          </div>
         </div>
       </div>
       <Divider />
       <div className={styles.piawood}>
-        <div>
+        <div className={styles.piawoodImg}>
           <PalmTrees />
         </div>
         <div className={styles.casaAmarelaInfo}>
@@ -120,15 +129,19 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className={styles.casaAmarelaEstatisticas}>
+      <Divider />
+      <div className={styles.piaWoodEstatisticas}>
+        <img
+          src="src/Assets/piawood_estatistica.png"
+          alt="Estatíticas Piawood"
+        />
+      </div>
+      <div className={styles.eventsSpace}>
         <Divider />
-        <PiawoodEstatistica className={styles.casaAmarelaEstatisticas} />
+        <Divider />
+        <Divider />
         <Divider />
       </div>
-      <Divider />
-      <Divider />
-      <Divider />
-      <Divider />
       <div className={styles.events}>
         <Title label="Live and" type="green" />
         <Title label="experience" type="green" />

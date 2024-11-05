@@ -38,18 +38,21 @@ const Footer = () => {
           type="yellowWhite"
           icon={WhatsAppIcon}
           size="small"
+          border="square"
         />
         <Label
           label="Instagram"
           type="yellowWhite"
           icon={InstagramIcon}
           size="small"
+          border="square"
         />
         <Label
           label="Twitter"
           type="yellowWhite"
           icon={TwitterIcon}
           size="small"
+          border="square"
         />
       </div>
     </div>

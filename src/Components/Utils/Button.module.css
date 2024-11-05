@@ -6,6 +6,7 @@
   text-transform: uppercase;
   font-weight: 500;
   font-family: inherit;
+  cursor: pointer;
 }
 
 .red {
@@ -26,4 +27,11 @@
 .yellow {
   background-color: var(--color-yellow);
   color: var(--color-yellow-accent);
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
+    font-size: 0.75rem;
+    letter-spacing: 0.05rem;
+  }
 }

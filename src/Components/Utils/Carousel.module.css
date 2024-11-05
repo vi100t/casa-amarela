@@ -8,6 +8,11 @@
   justify-content: center;
 }
 
-.carouselItem {
-  position: relative;
+@media only screen and (max-width: 600px) {
+  .carousel {
+    bottom: 1rem;
+  }
+  .carousel svg {
+    width: 0.5rem;
+  }
 }
