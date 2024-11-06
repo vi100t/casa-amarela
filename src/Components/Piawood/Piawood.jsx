@@ -19,6 +19,7 @@ const Piawood = () => {
   return (
     <div className={`container`}>
       <Header
+        buttonColor="yellow"
         className={styles.header}
         background="backgroundWhite"
         mobileButton="transparent10"
@@ -99,7 +100,7 @@ const Piawood = () => {
         <ExperienciaAutenticaMobile className={styles.mobile} />
         <ExperienciaAutentica className={styles.desktop} />
       </div>
-      <Footer />
+      <Footer labelColor="yellowWhite" />
     </div>
   );
 };

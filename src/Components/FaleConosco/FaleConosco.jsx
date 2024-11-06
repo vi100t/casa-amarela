@@ -11,14 +11,17 @@ import Footer from '../Utils/Footer';
 import WhatsAppIcon from '../../Assets/whatsapp_icon.svg?react';
 import InstagramIcon from '../../Assets/instagram_icon.svg?react';
 import TwitterIcon from '../../Assets/twitter_icon.svg?react';
+import CasaAmarela from '../../Assets/logo_casa_amarela.svg?react';
 
 const FaleConosco = () => {
   return (
     <div className={`container`}>
       <Header
+        buttonColor="yellow"
         className={styles.header}
         background="backgroundWhite"
         mobileButton="transparent10"
+        logo={CasaAmarela}
       ></Header>
       <Divider className={styles.mobile} />
       <Divider />
@@ -85,7 +88,7 @@ const FaleConosco = () => {
         <ExperienciaAutenticaMobile className={styles.mobile} />
         <ExperienciaAutentica className={styles.desktop} />
       </div>
-      <Footer />
+      <Footer labelColor="yellowWhite" />
     </div>
   );
 };

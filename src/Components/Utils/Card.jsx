@@ -13,16 +13,18 @@ const Card = () => {
     <div className={styles.card}>
       <div className={styles.labelContainer}>
         <Label
-          size="small"
+          // size="small"
           type="red"
           label="Hospitality"
           icon={LogoLabelRedAccent}
+          border="squareRound"
         />
         <Label
-          size="small"
-          type="red-reverse"
+          // size="small"
+          type="redReverse"
           label="Casa Rio"
           icon={LogoLabelRed}
+          border="squareRound"
         />
       </div>
       <div className={styles.containerImg}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Header.module.css';
 import { NavLink } from 'react-router-dom';
-import CasaAmarela from '../../Assets/logo_casa_amarela.svg?react';
+
 import LogoMenu from '../../Assets/logo_label_menu.svg?react';
 import BurguerMenu from '../../Assets/burguer_menu.svg?react';
 import ArrowDown from '../../Assets/arrow_down.svg?react';
@@ -22,7 +22,7 @@ const Header = (props) => {
           to="/"
           aria-label="Casa Amarela - Home"
         >
-          <CasaAmarela />
+          {props.logo && <props.logo />}
         </NavLink>
         <div className={styles.menu}>
           <NavLink to="/Hospitality">HOSPITALITY</NavLink>
@@ -43,7 +43,7 @@ const Header = (props) => {
           </NavLink>
         </div>
         <NavLink className={styles.faleConosco} to="/FaleConosco">
-          <Button type="yellow" label="Fale Conosco"></Button>
+          <Button type={props.buttonColor} label="Fale Conosco"></Button>
         </NavLink>
       </nav>
       <nav className={styles.mobile}>
@@ -62,7 +62,7 @@ const Header = (props) => {
             to="/"
             aria-label="Casa Amarela - Home"
           >
-            <CasaAmarela />
+            {props.logo && <props.logo />}
           </NavLink>
         </div>
         <div>

@@ -19,6 +19,7 @@ const Hospitality = () => {
   return (
     <div className={`container`}>
       <Header
+        buttonColor="yellow"
         className={styles.header}
         background="backgroundWhite"
         mobileButton="transparent10"

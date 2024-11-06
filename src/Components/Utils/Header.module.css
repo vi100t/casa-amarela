@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   position: absolute;
-  top: 0.75rem;
+  top: 1.25rem;
   left: 0; 
   right: 0; 
   margin-inline: auto; 
@@ -10,7 +10,8 @@
 .backgroundWhite {
   background-color: var(--c1);
   margin-top: -1rem;
-  padding: 1rem;
+  padding: 2rem !important;
+  top: 0;
 }
 
 .nav {
@@ -34,7 +35,7 @@
 }
 
 .logoMobile svg {
-  width: 80%;
+  width: 100%;
 }
 
 a {
@@ -60,6 +61,7 @@ a {
 @media only screen and (max-width: 600px) {
   .header {
     width: 100%;
+    padding: 0 2rem;
   }
 
   .nav {
@@ -93,13 +95,13 @@ a {
   .mobileNav {
     grid-row: 2 / -1;
     background-color: var(--c1);
-    color: var(--c3);
+    color: var(--c4);
     font-size: 1rem;
   }
 
   .mobileNavMenu li {
     padding: 0.75rem;
-    border-bottom: 1px solid var(--c2);
+    border-bottom: 1px solid var(--c3);
     display: flex;
     justify-content: space-between;
   }
@@ -129,7 +131,8 @@ a {
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
   .header {
-    width: auto;
+    width: 100%;
+    padding: 0 2rem;
   }
   .nav {
     display: none !important;
@@ -160,13 +163,13 @@ a {
   .mobileNav {
     grid-row: 2 / -1;
     background-color: var(--c1);
-    color: var(--c3);
+    color: var(--c4);
     font-size: 1rem;
   }
 
   .mobileNavMenu li {
     padding: 0.75rem;
-    border-bottom: 1px solid var(--c2);
+    border-bottom: 1px solid var(--c3);
     display: flex;
     justify-content: space-between;
   }
@@ -196,7 +199,8 @@ a {
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
   .header {
-    width: auto;
+    width: 100%;
+    padding: 0 2rem;
   }
   .nav {
     display: none !important;
@@ -227,13 +231,13 @@ a {
   .mobileNav {
     grid-row: 2 / -1;
     background-color: var(--c1);
-    color: var(--c3);
+    color: var(--c4);
     font-size: 1rem;
   }
 
   .mobileNavMenu li {
     padding: 0.75rem;
-    border-bottom: 1px solid var(--c2);
+    border-bottom: 1px solid var(--c3);
     display: flex;
     justify-content: space-between;
   }

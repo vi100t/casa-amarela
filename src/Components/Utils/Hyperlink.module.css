@@ -26,3 +26,7 @@
 .arrowGreen path {
   fill: var(--color-green)
 }
+
+@media only screen and (max-width: 1000px) {
+  .hyperlink {font-size: 1rem;}
+}

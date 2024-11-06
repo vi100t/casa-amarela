@@ -10,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 import Label from './Label';
 import Divider from './Divider';
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <div className={styles.footer}>
       <div className={styles.logoFooter}>
@@ -37,7 +37,7 @@ const Footer = () => {
       <div className={styles.labelGroup}>
         <Label
           label="WhatsApp"
-          type="yellowWhite"
+          type={props.labelColor}
           icon={WhatsAppIcon}
           size="small"
           border="square"
@@ -45,7 +45,7 @@ const Footer = () => {
         />
         <Label
           label="Instagram"
-          type="yellowWhite"
+          type={props.labelColor}
           icon={InstagramIcon}
           size="small"
           border="square"
@@ -53,7 +53,7 @@ const Footer = () => {
         />
         <Label
           label="Twitter"
-          type="yellowWhite"
+          type={props.labelColor}
           icon={TwitterIcon}
           size="small"
           border="square"

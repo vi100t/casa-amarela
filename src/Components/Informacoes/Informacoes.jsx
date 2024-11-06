@@ -6,26 +6,25 @@ import LogoBrown from '../../Assets/logo_label_menu.svg?react';
 import LogoRed from '../../Assets/logo_label_red_sm.svg?react';
 import LogoBlue from '../../Assets/logo_label_green.svg?react';
 import LogoLabelOrange from '../../Assets/logo_label_orange.svg?react';
-
 import ExplamationPoint from '../../Assets/exclamation_point_round.svg?react';
 import Lupa from '../../Assets/magnifying_glass.svg?react';
 import TextContent from '../Utils/TextContent';
 import Title from '../Utils/Title';
 import Label from '../Utils/Label';
 import Footer from '../Utils/Footer';
-import WhatsAppIcon from '../../Assets/whatsapp_icon.svg?react';
-import InstagramIcon from '../../Assets/instagram_icon.svg?react';
-import TwitterIcon from '../../Assets/twitter_icon.svg?react';
 import Button from '../Utils/Button';
 import Input from '../Utils/Input';
+import CasaAmarela from '../../Assets/logo_casa_amarela.svg?react';
 
 const Informacoes = () => {
   return (
     <div className={`container`}>
       <Header
+        buttonColor="yellow"
         className={styles.header}
         background="backgroundWhite"
         mobileButton="transparent10"
+        logo={CasaAmarela}
       ></Header>
       <Divider className={styles.mobile} />
       <div className={styles.informacoes}>
@@ -272,7 +271,7 @@ const Informacoes = () => {
           alt="Lago"
         />
       </div>
-      <Footer />
+      <Footer labelColor="yellowWhite" />
     </div>
   );
 };

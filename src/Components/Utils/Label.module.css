@@ -1,7 +1,7 @@
 .label {
   border-radius: 0.75rem;
   border: none;
-  padding: 0.25rem 0.5rem;
+  padding: 0.75rem 0.5rem;
   display: flex;
   gap: 0.50rem;
   align-items: center;
@@ -14,11 +14,12 @@
 
 .small {
   font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
 }
 
 .small svg {
-  width: .5rem;
-  height: .5rem;
+  width: .75rem !important;
+  height: .75rem !important;
 }
 
 .label svg {
@@ -26,7 +27,7 @@
   height: 1.5rem;
 }
 
-.red-reverse {
+.redReverse {
   color: var(--color-red);
   background-color: var(--color-red-accent);
 }
@@ -36,12 +37,12 @@
   color: var(--color-red-accent);
 }
 
-.red-white {
+.redWhite {
   background-color: var(--color-red);
   color: var(--c1);
 }
 
-.red-accent {
+.redAccent {
   background-color: var(--color-red-accent);
   color: var(--c5);
 }
@@ -59,6 +60,16 @@
 .orange {
   background-color: var(--color-orange);
   color: var(--color-orange-accent);
+}
+
+.orangeWhite {
+  background-color: var(--color-orange);
+  color: var(--c1);
+}
+
+.orangeAccent {
+  background-color: var(--color-orange-accent);
+  color: var(--color-orange);
 }
 
 .yellow {
@@ -80,6 +91,14 @@
   background-color: hsla(0, 0%, 0%, 0.3);
 }
 
+.transparent30OrangeAccent {
+  background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+.transparent30OrangeAccent svg path{
+  fill: var(--color-orange-accent);
+}
+
 .transparent10 {
   background-color: hsla(0, 0%, 0%, 0.1);
 }
@@ -89,7 +108,7 @@
 }
 
 .squareRound {
-  border-radius: 0.50rem;
+  border-radius: 0.50rem !important;
 }
 
 .round {

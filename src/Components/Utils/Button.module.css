@@ -11,11 +11,22 @@
   gap: 0.50rem;
   align-items: center;
   font-size: 0.75rem;
+  justify-content: center;
 }
 
 .red {
   background-color: var(--color-red);
   color: var(--color-red-accent);
+}
+
+.orangeAccent {
+  background-color: var(--color-orange-accent);
+  color: var(--color-orange);
+}
+
+.orange {
+  background-color: var(--color-orange);
+  color: var(--color-orange-accent);
 }
 
 .blue {

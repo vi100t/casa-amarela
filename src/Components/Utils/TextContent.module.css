@@ -19,6 +19,14 @@
   color: var(--c6);
 }
 
+.blackBrown {
+  color: var(--c6);
+}
+
+.brown {
+  color: var(--color-brown);
+}
+
 .medium {
   font-size: 1.25rem;
 }
@@ -50,6 +58,9 @@
   }
   .black {
     opacity: 60%;
+  }
+  .blackBrown {
+    color: var(--color-brown);
   }
   .maxCharacters30 {
     max-width: 100%;

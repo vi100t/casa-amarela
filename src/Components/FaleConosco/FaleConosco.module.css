@@ -73,6 +73,7 @@
     right: 0;
     left: 0;
     width: 100%;
+    top: 48%;
   }
   .mobile {
     display: block;
@@ -83,8 +84,7 @@
   .experienciaAut {
     padding: 2.5rem 0.75rem;
     position: relative;
-
-    margin-top: 15rem;
+    margin-top: 18rem;
   }
 }
 
@@ -116,6 +116,7 @@
     right: 0;
     left: 0;
     width: 100%;
+    top: 48%;
   }
   .mobile {
     display: block;

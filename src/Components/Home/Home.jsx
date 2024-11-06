@@ -22,13 +22,29 @@ import SpeechBalloon from '../Utils/SpeechBalloon';
 import Card from '../Utils/Card';
 import Button from '../Utils/Button';
 import Footer from '../Utils/Footer';
+import CasaAmarela from '../../Assets/logo_casa_amarela.svg?react';
 
 const Home = () => {
   return (
     <div className={`${styles.home} container`}>
-      <Header className={styles.header} mobileButton="transparent30"></Header>
-
-      <img src="src/Assets/home_1.png" alt="Quarto" />
+      <Header
+        buttonColor="yellow"
+        className={styles.header}
+        mobileButton="transparent30"
+        logo={CasaAmarela}
+      ></Header>
+      <div className={styles.container}>
+        <img
+          className={styles.desktop}
+          src="src/Assets/home_1.png"
+          alt="Quarto"
+        />
+        <img
+          className={styles.mobile}
+          src="src/Assets/home_1_mobile.png"
+          alt="Quarto"
+        />
+      </div>
 
       <Divider />
 
@@ -55,7 +71,12 @@ const Home = () => {
       <div className={styles.hospitality}>
         <div className={styles.casaAmarelaInfo}>
           <div className={styles.hospitalityTitle}>
-            <Label label="Hospitality" type="red-reverse" icon={LogoLabelRed} />
+            <Label
+              label="Hospitality"
+              type="redReverse"
+              border="squareRound"
+              icon={LogoLabelRed}
+            />
             <Title label="Live and experience" type="redAccent3" />
           </div>
 
@@ -119,7 +140,12 @@ const Home = () => {
         </div>
         <div className={styles.casaAmarelaInfo}>
           <div className={styles.hospitalityTitle}>
-            <Label label="Piawood" type="blue" icon={LogoLabelGreen} />
+            <Label
+              label="Piawood"
+              type="blue"
+              icon={LogoLabelGreen}
+              border="squareRound"
+            />
           </div>
 
           <TextContent
@@ -161,11 +187,15 @@ const Home = () => {
         </div>
         <div className={styles.casaAmarelaInfo}>
           <div className={styles.hospitalityTitle}>
-            <Label label="Yellow Filme" type="orange" icon={LogoLabelOrange} />
+            <Label
+              label="Yellow Filme"
+              type="orange"
+              icon={LogoLabelOrange}
+              border="squareRound"
+            />
           </div>
-
           <TextContent
-            type="black"
+            type="blackBrown"
             content="A Yellow Filme é a produtora audiovisual da Casa Amarela, focada em promover as atividades do hub cultural Piawood         e do projeto de hospitalidade. A empresa atua em duas frentes: produção interna, criando conteúdos para divulgação e marketing, e serviços externos, oferecendo expertise local para marcas que buscam produções na região do Piauí. Com um foco regional, a Yellow Filme valoriza a cultura, os talentos e os cenários locais, criando conteúdos autênticos e de alto impacto visual."
             maxCharacters="maxCharacters30"
           />
@@ -180,7 +210,7 @@ const Home = () => {
       <div className={styles.videoBanner}>
         <img src="src/Assets/video_banner.png" alt="Video Banner" />
       </div>
-      <Footer />
+      <Footer labelColor="yellowWhite" />
     </div>
   );
 };
