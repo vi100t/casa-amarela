@@ -19,6 +19,7 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  font-weight: 700;
 }
 
 .labelGroup {
@@ -37,5 +38,13 @@
   .linkGroup {
     font-size: 0.75rem;
     gap: 1rem;
+  }
+  .logoFooter  {
+    display: flex;
+    justify-content: center;
+
+  }
+  .logoFooter svg {
+    width: 65%;
   }
 }

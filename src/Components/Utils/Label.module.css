@@ -8,8 +8,22 @@
   text-wrap: nowrap;
 }
 
+.smaller {
+  font-size: 0.5rem;
+}
+
 .small {
   font-size: 0.75rem;
+}
+
+.small svg {
+  width: .5rem;
+  height: .5rem;
+}
+
+.label svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .red-reverse {
@@ -62,12 +76,20 @@
   color: var(--c1);
 }
 
-.transparent {
+.transparent30 {
   background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+.transparent10 {
+  background-color: hsla(0, 0%, 0%, 0.1);
 }
 
 .square {
   border-radius: 0.25rem;
+}
+
+.squareRound {
+  border-radius: 0.50rem;
 }
 
 .round {
@@ -83,10 +105,19 @@
     width: min-content;
   }
 
+  .small svg {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
   .label {
     font-size: 0.75rem;
     padding: 0.25rem 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+  }
+
+  .square {
+    border-radius: 0.25rem;
   }
 
   .equal {
@@ -110,6 +141,10 @@
 }
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
+  .small svg {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
   .equal {
     display: flex;
     justify-content: center;
@@ -118,9 +153,16 @@
     width: 3rem;
     height: 3rem;
   }
+  .square {
+    border-radius: 0.25rem;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .small svg {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
   .equal {
     display: flex;
     justify-content: center;
@@ -128,6 +170,9 @@
     padding: 0.75rem;
     width: 3rem;
     height: 3rem;
+  }
+  .square {
+    border-radius: 0.25rem;
   }
 }
 

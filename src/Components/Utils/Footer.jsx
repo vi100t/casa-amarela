@@ -6,31 +6,33 @@ import WhatsAppIcon from '../../Assets/whatsapp_icon.svg?react';
 import InstagramIcon from '../../Assets/instagram_icon.svg?react';
 import TwitterIcon from '../../Assets/twitter_icon.svg?react';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Label from './Label';
 import Divider from './Divider';
 
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <LogoFooter />
+      <div className={styles.logoFooter}>
+        <LogoFooter />
+      </div>
       <div className={styles.linkGroup}>
-        <Link className={styles.link}>
+        <NavLink className={styles.link}>
           Hospitality
           <ArrowRightFooter />
-        </Link>
-        <Link className={styles.link}>
+        </NavLink>
+        <NavLink className={styles.link}>
           Piawood
           <ArrowRightFooter />
-        </Link>
-        <Link className={styles.link}>
+        </NavLink>
+        <NavLink className={styles.link}>
           Yellow Filme
           <ArrowRightFooter />
-        </Link>
-        <Link className={styles.link}>
+        </NavLink>
+        <NavLink className={styles.link}>
           Informações
           <ArrowRightFooter />
-        </Link>
+        </NavLink>
       </div>
       <div className={styles.labelGroup}>
         <Label

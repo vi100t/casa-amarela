@@ -57,3 +57,7 @@ button, input {
   padding: 0.25rem 1rem;
   margin: 0 auto;
 }
+
+.activeLink {
+  color: var(--color-yellow);
+}

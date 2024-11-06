@@ -26,7 +26,7 @@ import Footer from '../Utils/Footer';
 const Home = () => {
   return (
     <div className={`${styles.home} container`}>
-      <Header className={styles.header}></Header>
+      <Header className={styles.header} mobileButton="transparent30"></Header>
 
       <img src="src/Assets/home_1.png" alt="Quarto" />
 
@@ -161,7 +161,7 @@ const Home = () => {
         </div>
         <div className={styles.casaAmarelaInfo}>
           <div className={styles.hospitalityTitle}>
-            <Label label="Piawood" type="orange" icon={LogoLabelOrange} />
+            <Label label="Yellow Filme" type="orange" icon={LogoLabelOrange} />
           </div>
 
           <TextContent

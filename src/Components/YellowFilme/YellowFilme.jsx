@@ -1,9 +1,10 @@
 import React from 'react';
-import styles from './FaleConosco.module.css';
+import styles from './YellowFilme.module.css';
 import Header from '../Utils/Header';
 import Divider from '../Utils/Divider';
 import ExperienciaAutentica from '../../Assets/experiencia_autentica.svg?react';
 import ExperienciaAutenticaMobile from '../../Assets/experiencia_autentica_mobile.svg?react';
+import Lupa from '../../Assets/magnifying_glass.svg?react';
 import TextContent from '../Utils/TextContent';
 import Title from '../Utils/Title';
 import Label from '../Utils/Label';
@@ -11,8 +12,10 @@ import Footer from '../Utils/Footer';
 import WhatsAppIcon from '../../Assets/whatsapp_icon.svg?react';
 import InstagramIcon from '../../Assets/instagram_icon.svg?react';
 import TwitterIcon from '../../Assets/twitter_icon.svg?react';
+import Button from '../Utils/Button';
+import Input from '../Utils/Input';
 
-const FaleConosco = () => {
+const YellowFilme = () => {
   return (
     <div className={`container`}>
       <Header
@@ -22,7 +25,18 @@ const FaleConosco = () => {
       ></Header>
       <Divider className={styles.mobile} />
       <Divider />
-      <div className={styles.faleConosco}>
+      <div className={styles.informacoes}>
+        <div className={styles.header}>
+          <Title label="Informações" type="yellow" />
+          <TextContent
+            content="Lorem ipsum dolor sit amet consectetur adipiscing elit hac habitant facilisi, sodales inceptos turpis mollis convallis risus ornare vehicula elementum eleifend, aliquet maecenas litora cubilia vitae interdum habitasse posuere ex. Rutrum torquent ullamcorper taciti cubilia neque enim, nostra risus erat suscipit tempor, donec maecenas morbi cursus sagittis. "
+            type="black"
+          />
+          <div>
+            <Input placeholder="Busque sua dúvida aqui" />
+            <Button type="yellow" label="Buscar" icon={Lupa}></Button>
+          </div>
+        </div>
         <div className={styles.entreEmContato}>
           <img
             className={styles.entreEmContatoImg}
@@ -90,4 +104,4 @@ const FaleConosco = () => {
   );
 };
 
-export default FaleConosco;
+export default YellowFilme;
