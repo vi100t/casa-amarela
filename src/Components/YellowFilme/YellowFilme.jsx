@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './YellowFilme.module.css';
 import Header from '../Utils/Header';
-import Divider from '../Utils/Divider';
 import LogoSea from '../../Assets/logo_sea.svg?react';
 import LogoOrange from '../../Assets/logo_label_orange.svg?react';
 import LogoOrangeAccent from '../../Assets/logo_label_orange_accent.svg?react';

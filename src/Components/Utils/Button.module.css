@@ -19,6 +19,11 @@
   color: var(--color-red-accent);
 }
 
+.redWhite {
+  background-color: var(--color-red);
+  color: var(--c1);
+}
+
 .orangeAccent {
   background-color: var(--color-orange-accent);
   color: var(--color-orange);

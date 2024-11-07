@@ -68,7 +68,7 @@ const Informacoes = () => {
             <div>
               <Label
                 label="Hospitality"
-                type="red-reverse"
+                type="redReverse"
                 border="squareRound"
                 icon={LogoRed}
               />

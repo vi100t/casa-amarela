@@ -5,6 +5,7 @@
   left: 0; 
   right: 0; 
   margin-inline: auto; 
+  max-width: 100rem;
 }
 
 .backgroundWhite {
@@ -15,11 +16,12 @@
 }
 
 .nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
   text-wrap: nowrap;
   padding: 0rem 3rem;
+  align-items: center;
 }
 
 .mobile {

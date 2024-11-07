@@ -25,7 +25,7 @@ const Header = (props) => {
           {props.logo && <props.logo />}
         </NavLink>
         <div className={styles.menu}>
-          <NavLink to="/Hospitality">HOSPITALITY</NavLink>
+          <NavLink to="/HospitalityHospedagem">HOSPITALITY</NavLink>
           <NavLink to="/Piawood" onClick={() => setNavbarOpen((prev) => !prev)}>
             PIAWOOD
           </NavLink>
@@ -89,18 +89,18 @@ const Header = (props) => {
           </div>
           <nav className={styles.mobileNav}>
             <ul className={styles.mobileNavMenu}>
-              <li>
+              <li onClick={() => setHospitality((prev) => !prev)}>
                 Hospitality
-                <ArrowDown onClick={() => setHospitality((prev) => !prev)} />
+                <ArrowDown />
               </li>
               {showHospitality && (
                 <li>
-                  <NavLink to="/YellowFilme">Hospedagens</NavLink>
+                  <NavLink to="/HospitalityHospedagem">Hospedagens</NavLink>
                 </li>
               )}
               {showHospitality && (
                 <li>
-                  <NavLink to="/YellowFilme">Passeios</NavLink>
+                  <NavLink to="/Hospitality">Passeios</NavLink>
                 </li>
               )}
               <li>Piawood</li>

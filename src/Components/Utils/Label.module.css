@@ -14,7 +14,8 @@
 
 .small {
   font-size: 0.75rem;
-  padding: 0.25rem 0.75rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .small svg {
@@ -44,7 +45,7 @@
 
 .redAccent {
   background-color: var(--color-red-accent);
-  color: var(--c5);
+  color: var(--color-red);
 }
 
 .white {
@@ -97,6 +98,14 @@
 
 .transparent30OrangeAccent svg path{
   fill: var(--color-orange-accent);
+}
+
+.transparent30Red {
+  background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+.transparent30Red svg path{
+  fill: var(--color-red);
 }
 
 .transparent10 {

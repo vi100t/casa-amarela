@@ -1,106 +1,260 @@
 import React from 'react';
 import styles from './Hospitality.module.css';
 import Header from '../Utils/Header';
-import Divider from '../Utils/Divider';
-import ExperienciaAutentica from '../../Assets/experiencia_autentica.svg?react';
-import ExperienciaAutenticaMobile from '../../Assets/experiencia_autentica_mobile.svg?react';
-import Lupa from '../../Assets/magnifying_glass.svg?react';
+import Lupa from '../../Assets/magnifying_glass_white.svg?react';
+import ArrowLeft from '../../Assets/arrow_left_paginacao.svg?react';
+import ArrowRight from '../../Assets/arrow_right_paginacao.svg?react';
 import TextContent from '../Utils/TextContent';
-import Title from '../Utils/Title';
 import Label from '../Utils/Label';
 import Footer from '../Utils/Footer';
-import WhatsAppIcon from '../../Assets/whatsapp_icon.svg?react';
-import InstagramIcon from '../../Assets/instagram_icon.svg?react';
-import TwitterIcon from '../../Assets/twitter_icon.svg?react';
 import Button from '../Utils/Button';
-import Input from '../Utils/Input';
+import Select from '../Utils/Select';
+import LogoRed from '../../Assets/logo_label_red.svg?react';
+import LogoRedAccent from '../../Assets/logo_label_red_accent.svg?react';
+import { NavLink } from 'react-router-dom';
 
 const Hospitality = () => {
   return (
-    <div className={`container`}>
+    <div>
       <Header
-        buttonColor="yellow"
+        buttonColor="redWhite"
         className={styles.header}
-        background="backgroundWhite"
-        mobileButton="transparent10"
+        mobileButton="transparent30Red"
+        logo={LogoRed}
       ></Header>
-      <Divider className={styles.mobile} />
-      <Divider />
-      <div className={styles.informacoes}>
-        <div className={styles.header}>
-          <Title label="Informações" type="yellow" />
-          <TextContent
-            content="Lorem ipsum dolor sit amet consectetur adipiscing elit hac habitant facilisi, sodales inceptos turpis mollis convallis risus ornare vehicula elementum eleifend, aliquet maecenas litora cubilia vitae interdum habitasse posuere ex. Rutrum torquent ullamcorper taciti cubilia neque enim, nostra risus erat suscipit tempor, donec maecenas morbi cursus sagittis. "
-            type="black"
-          />
-          <div>
-            <Input placeholder="Busque sua dúvida aqui" />
-            <Button type="yellow" label="Buscar" icon={Lupa}></Button>
-          </div>
-        </div>
-        <div className={styles.entreEmContato}>
-          <img
-            className={styles.entreEmContatoImg}
-            src="src/Assets/chapeu_chinelo.png"
-            alt="Chapéu e Chinelo"
-          />
-
-          <Title label="Entre em Contato" type="yellow" />
-          <TextContent
-            content="Para entrar em contato com a Casa Amarela, nossa principal plataforma é o WhatsApp. Acesse diretamente através do botão abaixo e também siga nossas redes sociais para ficar por dentro das novidades. Caso tenha dúvidas ou queira planejar sua estadia, nossa equipe está à disposição para ajudar."
-            type="black"
-          />
-          <div className={styles.labelGroup}>
-            <div>
-              <Label
-                label="WhatsApp"
-                type="yellowWhite"
-                icon={WhatsAppIcon}
-                size="small"
-                border="square"
-                clickable="clickable"
-              />
-            </div>
-            <div>
-              <Label
-                label="Instagram"
-                type="yellowWhite"
-                icon={InstagramIcon}
-                size="small"
-                border="square"
-                clickable="clickable"
-              />
-            </div>
-            <div>
-              <Label
-                label="Twitter"
-                type="yellowWhite"
-                icon={TwitterIcon}
-                size="small"
-                border="square"
-                clickable="clickable"
-              />
-            </div>
-          </div>
-          <div className={styles.desktop}>
-            <Divider />
-          </div>
-
-          <Divider />
-        </div>
-      </div>
-      <div className={styles.experienciaAutImg}>
+      <div className={styles.container}>
         <img
-          className={styles.entreEmContatoImgMobile}
-          src="src/Assets/chapeu_chinelo_mobile.png"
-          alt="Chapéu e Chinelo"
+          className={styles.desktop}
+          src="src/Assets/hospitality_banner.png"
+          alt="Hospitality Banner"
+        />
+        <img
+          className={styles.mobile}
+          src="src/Assets/hospitality_banner_mobile.png"
+          alt="Hospitality Banner"
         />
       </div>
-      <div className={styles.experienciaAut}>
-        <ExperienciaAutenticaMobile className={styles.mobile} />
-        <ExperienciaAutentica className={styles.desktop} />
+      <div className={styles.menuHospitality}>
+        <div className={styles.unselected}>
+          <NavLink to="/HospitalityHospedagem">Hospedagens</NavLink>
+        </div>
+        <div>Passeios</div>
       </div>
-      <Footer />
+      <div className={styles.cardsGroup}>
+        <div className={styles.cards}>
+          <LogoRed />
+          Shows
+        </div>
+        <div className={styles.cards}>
+          <LogoRed />
+          Workshops
+        </div>
+        <div className={styles.cards}>
+          <LogoRed />
+          Exposições
+        </div>
+        <div className={styles.cards}>
+          <LogoRed />
+          Gastronomia
+        </div>
+        <div className={styles.cards}>
+          <LogoRed />
+          Esportes
+        </div>
+      </div>
+      <div className={styles.containerBusca}>
+        <Select
+          placeholder="Eventos Exclusivos"
+          icon="star"
+          input="select"
+        ></Select>
+        <Select
+          placeholder="Período de Temporada"
+          icon="calendar"
+          input="select"
+        ></Select>
+        <Select placeholder="Lua" icon="moon" input="select"></Select>
+        <div>
+          <Button type="red" label="Buscar" icon={Lupa}></Button>
+        </div>
+      </div>
+      <div className={styles.gridPasseios}>
+        <div className={styles.passeios}>
+          <div className={styles.passeio}>
+            <div className={styles.passeioContainer}>
+              <div className={styles.passeioInfo}>
+                <div className={styles.passeioLabels}>
+                  <Label
+                    label="Hospitality"
+                    type="red"
+                    icon={LogoRedAccent}
+                    border="squareRound"
+                    size="small"
+                  />
+                  <Label
+                    label="Esporte"
+                    type="redAccent"
+                    icon={LogoRed}
+                    border="squareRound"
+                    size="small"
+                  />
+                </div>
+                <TextContent
+                  type="small"
+                  maxCharacters="maxCharacters20"
+                  color="black"
+                  content="Lorem ipsum dolor sit amet consectetur adipiscing elit hac habitant facilisi, sodales inceptos turpis mollis convallis risus ornare vehicula elementum eleifend, aliquet maecenas litora cubilia vitae interdum habitasse posuere ex."
+                />
+              </div>
+              <div className={`${styles.mobile} ${styles.buttonMobileCard}`}>
+                <Button label="Reservar" type="red" />
+              </div>
+              <div className={`${styles.passeioImg} ${styles.desktop}`}>
+                <img src="src/Assets/passeio_1.png" alt="Passeio" />
+              </div>
+            </div>
+            <div className={`${styles.passeioImg} ${styles.mobile}`}>
+              <img src="src/Assets/passeio_1.png" alt="Passeio" />
+            </div>
+            <div className={`${styles.desktop}`}>
+              <Button label="Reservar" type="red" />
+            </div>
+          </div>
+          <div className={styles.passeio}>
+            <div className={styles.passeioContainer}>
+              <div className={styles.passeioInfo}>
+                <div className={styles.passeioLabels}>
+                  <Label
+                    label="Hospitality"
+                    type="red"
+                    icon={LogoRedAccent}
+                    border="squareRound"
+                    size="small"
+                  />
+                  <Label
+                    label="Gastronomia"
+                    type="redAccent"
+                    icon={LogoRed}
+                    border="squareRound"
+                    size="small"
+                  />
+                </div>
+                <TextContent
+                  type="small"
+                  maxCharacters="maxCharacters20"
+                  color="black"
+                  content="Lorem ipsum dolor sit amet consectetur adipiscing elit hac habitant facilisi, sodales inceptos turpis mollis convallis risus ornare vehicula elementum eleifend, aliquet maecenas litora cubilia vitae interdum habitasse posuere ex."
+                />
+              </div>
+              <div className={`${styles.mobile} ${styles.buttonMobileCard}`}>
+                <Button label="Reservar" type="red" />
+              </div>
+              <div className={`${styles.passeioImg} ${styles.desktop}`}>
+                <img src="src/Assets/passeio_2.png" alt="Passeio" />
+              </div>
+            </div>
+            <div className={`${styles.passeioImg} ${styles.mobile}`}>
+              <img src="src/Assets/passeio_2.png" alt="Passeio" />
+            </div>
+            <div className={`${styles.desktop}`}>
+              <Button label="Reservar" type="red" />
+            </div>
+          </div>
+          <div className={styles.passeio}>
+            <div className={styles.passeioContainer}>
+              <div className={styles.passeioInfo}>
+                <div className={styles.passeioLabels}>
+                  <Label
+                    label="Hospitality"
+                    type="red"
+                    icon={LogoRedAccent}
+                    border="squareRound"
+                    size="small"
+                  />
+                  <Label
+                    label="Show"
+                    type="redAccent"
+                    icon={LogoRed}
+                    border="squareRound"
+                    size="small"
+                  />
+                </div>
+                <TextContent
+                  type="small"
+                  maxCharacters="maxCharacters20"
+                  color="black"
+                  content="Lorem ipsum dolor sit amet consectetur adipiscing elit hac habitant facilisi, sodales inceptos turpis mollis convallis risus ornare vehicula elementum eleifend, aliquet maecenas litora cubilia vitae interdum habitasse posuere ex."
+                />
+              </div>
+              <div className={`${styles.mobile} ${styles.buttonMobileCard}`}>
+                <Button label="Reservar" type="red" />
+              </div>
+              <div className={`${styles.passeioImg} ${styles.desktop}`}>
+                <img src="src/Assets/passeio_3.png" alt="Passeio" />
+              </div>
+            </div>
+            <div className={`${styles.passeioImg} ${styles.mobile}`}>
+              <img src="src/Assets/passeio_3.png" alt="Passeio" />
+            </div>
+            <div className={`${styles.desktop}`}>
+              <Button label="Reservar" type="red" />
+            </div>
+          </div>
+          <div className={styles.passeio}>
+            <div className={styles.passeioContainer}>
+              <div className={styles.passeioInfo}>
+                <div className={styles.passeioLabels}>
+                  <Label
+                    label="Hospitality"
+                    type="red"
+                    icon={LogoRedAccent}
+                    border="squareRound"
+                    size="small"
+                  />
+                  <Label
+                    label="Reveillon"
+                    type="redAccent"
+                    icon={LogoRed}
+                    border="squareRound"
+                    size="small"
+                  />
+                </div>
+                <TextContent
+                  type="small"
+                  maxCharacters="maxCharacters20"
+                  color="black"
+                  content="Lorem ipsum dolor sit amet consectetur adipiscing elit hac habitant facilisi, sodales inceptos turpis mollis convallis risus ornare vehicula elementum eleifend, aliquet maecenas litora cubilia vitae interdum habitasse posuere ex."
+                />
+              </div>
+              <div className={`${styles.mobile} ${styles.buttonMobileCard}`}>
+                <Button label="Reservar" type="red" />
+              </div>
+              <div className={`${styles.passeioImg} ${styles.desktop}`}>
+                <img src="src/Assets/passeio_4.png" alt="Passeio" />
+              </div>
+            </div>
+            <div className={`${styles.passeioImg} ${styles.mobile}`}>
+              <img src="src/Assets/passeio_4.png" alt="Passeio" />
+            </div>
+            <div className={`${styles.desktop}`}>
+              <Button label="Reservar" type="red" />
+            </div>
+          </div>
+        </div>
+        <div className={styles.paginacao}>
+          <ArrowLeft />
+          <div className={`${styles.pagina} ${styles.paginaSelecionada}`}>
+            1
+          </div>
+          <div className={styles.pagina}>2</div>
+          <div className={styles.pagina}>3</div>
+          <div className={styles.pagina}>4</div>
+          <div className={styles.pagina}>5</div>
+          <ArrowRight />
+        </div>
+      </div>
+
+      <Footer labelColor="redWhite" />
     </div>
   );
 };
