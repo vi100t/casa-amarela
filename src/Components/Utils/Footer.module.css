@@ -29,6 +29,14 @@
   gap: 1rem;
 }
 
+.redAccent {
+  background-color: var(--color-red-accent);
+}
+
+.blue {
+  background-color: var(--color-blue);
+}
+
 @media only screen and (max-width: 600px) {
 
   .footer {
@@ -46,5 +54,9 @@
   }
   .logoFooter svg {
     width: 65%;
+  }
+
+  .redAccent {
+    background-color: var(--color-red-accent-2);
   }
 }

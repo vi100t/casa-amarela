@@ -40,6 +40,10 @@
   font-size: 1.5rem;
 }
 
+.left {
+  text-align: start !important;
+}
+
 @media only screen and (max-width: 600px) {
   .title {
     font-size: 2rem;

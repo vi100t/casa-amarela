@@ -58,6 +58,16 @@
   color: var(--color-blue-accent);
 }
 
+.green {
+  background-color: var(--color-green);
+  color: var(--color-blue);
+}
+
+.greenWhite {
+  background-color: var(--color-green);
+  color: var(--c1);
+}
+
 .orange {
   background-color: var(--color-orange);
   color: var(--color-orange-accent);
@@ -98,6 +108,14 @@
 
 .transparent30OrangeAccent svg path{
   fill: var(--color-orange-accent);
+}
+
+.transparent30Blue {
+  background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+.transparent30Blue svg path{
+  fill: var(--color-blue);
 }
 
 .transparent30Red {

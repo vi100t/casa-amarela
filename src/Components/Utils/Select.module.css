@@ -25,6 +25,11 @@
   background-image: url("src/Assets/icon_moon.svg");
 }
 
+.logo {
+  background-image: url("src/Assets/icon_logo.svg");
+}
+
+
 ::-webkit-input-placeholder {
   font-style: italic;
   font-size: 0.75rem;

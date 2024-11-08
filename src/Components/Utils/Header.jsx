@@ -103,7 +103,9 @@ const Header = (props) => {
                   <NavLink to="/Hospitality">Passeios</NavLink>
                 </li>
               )}
-              <li>Piawood</li>
+              <li>
+                <NavLink to="/Piawood">Piawood</NavLink>
+              </li>
               <li>
                 <NavLink to="/YellowFilme">Yellow Filme</NavLink>
               </li>

@@ -44,6 +44,11 @@
   color: var(--color-green-accent);
 }
 
+.greenBlue {
+  background-color: var(--color-green);
+  color: var(--color-blue);
+}
+
 .yellow {
   background-color: var(--color-yellow);
   color: var(--color-yellow-accent);

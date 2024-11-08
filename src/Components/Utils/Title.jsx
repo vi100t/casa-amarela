@@ -4,7 +4,9 @@ import styles from './Title.module.css';
 const Title = (props) => {
   return (
     <div
-      className={`${styles.title} ${styles[props.size]} ${styles[props.type]}`}
+      className={`${styles.title} ${styles[props.size]} ${styles[props.type]} ${
+        styles[props.align]
+      }`}
     >
       {props.label}
     </div>

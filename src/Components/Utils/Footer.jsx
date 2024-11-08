@@ -12,7 +12,7 @@ import Divider from './Divider';
 
 const Footer = (props) => {
   return (
-    <div className={styles.footer}>
+    <div className={`${styles.footer} ${styles[props.backgroundColor]}`}>
       <div className={styles.logoFooter}>
         <LogoFooter />
       </div>

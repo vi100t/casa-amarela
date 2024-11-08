@@ -23,12 +23,14 @@ import Pool from '../../Assets/icon_pool.svg?react';
 import Wifi from '../../Assets/icon_wifi.svg?react';
 import SnowFlake from '../../Assets/icon_snowflake.svg?react';
 import Balcony from '../../Assets/icon_balcony.svg?react';
+import MagnifyingGlass from '../../Assets/magnifying_glass_white.svg?react';
 import PlusCircle from '../../Assets/plus_circle_gray.svg?react';
 
 import { NavLink } from 'react-router-dom';
 import Title from '../Utils/Title';
 const HospitalityHospedagem = () => {
-  const [show, setShowCard] = useState({ showLocation: true, showInfo: false });
+  const [showLocation, setLocation] = React.useState('true');
+
   return (
     <div>
       <Header
@@ -56,11 +58,33 @@ const HospitalityHospedagem = () => {
         </div>
       </div>
       <div className={styles.containerCasas}>
-        <Title label="CASA RIO" type="red" />
+        <div className={styles.desktop}>
+          <Title label="CASA RIO" type="red" />
+        </div>
+
         <div className={styles.casas}>
           <div className={styles.imgLabels}>
-            <img src="src/Assets/casa_rio_hospitality.png" alt="Casa Rio" />
-            <div className={styles.labels}>
+            <img
+              className={styles.desktop}
+              src="src/Assets/casa_rio_hospitality.png"
+              alt="Casa Rio"
+            />
+            <img
+              className={styles.mobile}
+              src="src/Assets/casa_rio_hospitality_mobile.png"
+              alt="Casa Rio"
+            />
+            <div className={`${styles.mobile} ${styles.containerBusca}`}>
+              <Select
+                input="select"
+                placeholder="Casa Rio"
+                icon="logo"
+              ></Select>
+              <div>
+                <Button label="Buscar" type="red" icon={MagnifyingGlass} />
+              </div>
+            </div>
+            <div className={`${styles.labels} ${styles.desktop}`}>
               <Label
                 label="Hospitality"
                 type="red"
@@ -158,8 +182,94 @@ const HospitalityHospedagem = () => {
                 size="small"
               />
             </div>
+            <div className={`${styles.labels} ${styles.mobile}`}>
+              <Label
+                label="Hospitality"
+                type="red"
+                border="squareRound"
+                icon={LogoRedAccent}
+                multiple="multiple"
+              />
+              <Label
+                label="Barrinha"
+                type="white"
+                border="squareRound"
+                icon={LocationPin}
+                multiple="multiple"
+              />
+              <Label
+                label="Vista para Lagoa do Santana"
+                type="white"
+                border="squareRound"
+                icon={Eye}
+                multiple="multiple"
+              />
+              <Label
+                label="Vista para Lagoa do Santana"
+                type="white"
+                border="squareRound"
+                icon={Moon}
+                multiple="multiple"
+              />
+              <Label
+                label="9 pessoas"
+                type="white"
+                border="squareRound"
+                icon={People}
+                multiple="multiple"
+              />
+              <Label
+                label="Cama de Casal"
+                type="white"
+                border="squareRound"
+                icon={DoubleBed}
+                multiple="multiple"
+              />
+              <Label
+                label="Cama de Solteiro"
+                type="white"
+                border="squareRound"
+                icon={Bed}
+                multiple="multiple"
+              />
+              <Label
+                label="Cozinha Completa"
+                type="white"
+                border="squareRound"
+                icon={Fridge}
+                multiple="multiple"
+              />
+              <Label
+                label="Piscina"
+                type="white"
+                border="squareRound"
+                icon={Pool}
+                multiple="multiple"
+              />
+              <Label
+                label="WiFi Fibra Ótica"
+                type="white"
+                border="squareRound"
+                icon={Wifi}
+                multiple="multiple"
+              />
+              <Label
+                label="Ar-Condicionado"
+                type="white"
+                border="squareRound"
+                icon={SnowFlake}
+                multiple="multiple"
+              />
+              <Label
+                label="Varanda"
+                type="white"
+                border="squareRound"
+                icon={Balcony}
+                multiple="multiple"
+              />
+            </div>
           </div>
-          <div className={styles.galeria}>
+          <div className={`${styles.galeria} ${styles.desktop}`}>
             <img src="src/Assets/hospitality_galeria.png" alt="Casa Rio 2" />
           </div>
           <div className={styles.comodidades}>
@@ -172,68 +282,76 @@ const HospitalityHospedagem = () => {
             </div>
             <div className={styles.detalhes}>
               <div className={styles.detalheItem}>
-                <Title label="COMODIDADES" type="black" size="small" />
+                <Title
+                  label="COMODIDADES"
+                  type="black"
+                  size="small"
+                  align="left"
+                />
                 <div>
                   <TextContent
                     type="medium"
-                    color="black"
+                    color="blackBlack"
                     content="vista para a Lagoa do Santana"
                   ></TextContent>
                   <TextContent
                     type="medium"
-                    color="black"
+                    color="blackBlack"
                     content="3 camas de casal"
                   ></TextContent>
                   <TextContent
                     type="medium"
-                    color="black"
+                    color="blackBlack"
                     content="3 camas de solteiro"
                   ></TextContent>
-                  <TextContent type="black" content="3 suítes"></TextContent>
+                  <TextContent
+                    type="blackBlack"
+                    content="3 suítes"
+                  ></TextContent>
                   <TextContent
                     type="medium"
-                    color="black"
+                    color="blackBlack"
                     content="1 dormitório com banheiro exclusivo ao lado"
                   ></TextContent>
                   <TextContent
                     type="medium"
-                    color="black"
+                    color="blackBlack"
                     content="Capacidade para até 9 pessoas."
                   ></TextContent>
                   <TextContent
                     type="medium"
-                    color="black"
+                    color="blackBlack"
                     content="Cozinha completa"
                   ></TextContent>
                   <TextContent
                     type="medium"
-                    color="black"
+                    color="blackBlack"
                     content="sala de estar"
                   ></TextContent>
                   <TextContent
                     type="medium"
-                    color="black"
+                    color="blackBlack"
                     content="varanda"
                   ></TextContent>
                   <TextContent
                     type="medium"
-                    color="black"
+                    color="blackBlack"
                     content="piscina"
                   ></TextContent>
                   <TextContent
                     type="medium"
-                    color="black"
+                    color="blackBlack"
                     content="Wi-Fi fibra óptica"
                   ></TextContent>
                 </div>
               </div>
             </div>
             <div className={styles.detalheItem}>
-              <Title label="descrição" type="black" size="small" />
+              <Title label="descrição" type="black" size="small" align="left" />
               <TextContent
                 maxCharacters="maxCharacters60"
                 type="medium"
-                color="black"
+                color="blackBlack"
                 content="A Casa Rio oferece 4 dormitórios, sendo 3 suítes e 1 dormitório com banheiro exclusivo ao lado. Todos os quartos têm ar-condicionado, acomodando confortavelmente até 9 pessoas. A casa possui uma varanda espaçosa, perfeita para momentos de lazer e convivência, além de uma cozinha completa, sala de estar e piscina com uma vista espetacular da Lagoa do Santana."
               />
             </div>
@@ -241,16 +359,18 @@ const HospitalityHospedagem = () => {
           <div className={styles.localizacaoInformacoes}>
             <div className={styles.menuCard}>
               <span
-                onClick={setShowCard(() => {
-                  true, false;
-                })}
+                className={
+                  showLocation.toString() == 'false' && styles.unselected
+                }
+                onClick={() => setLocation((prev) => !prev)}
               >
                 Localização
               </span>
               <span
-                onClick={setShowCard(() => {
-                  false, true;
-                })}
+                className={
+                  showLocation.toString() == 'true' && styles.unselected
+                }
+                onClick={() => setLocation((prev) => !prev)}
               >
                 Informações
               </span>
@@ -321,9 +441,8 @@ const HospitalityHospedagem = () => {
             <Button label="Fale Conosco" type="red" />
           </div>
         </div>
-
-        <Footer labelColor="redWhite" />
       </div>
+      <Footer backgroundColor="redAccent" labelColor="redWhite" />
     </div>
   );
 };
