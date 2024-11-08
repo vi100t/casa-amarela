@@ -3,7 +3,11 @@ import styles from './Title.module.css';
 
 const Title = (props) => {
   return (
-    <div className={`${styles.title} ${styles[props.type]}`}>{props.label}</div>
+    <div
+      className={`${styles.title} ${styles[props.size]} ${styles[props.type]}`}
+    >
+      {props.label}
+    </div>
   );
 };
 

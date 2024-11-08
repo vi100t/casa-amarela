@@ -23,11 +23,12 @@ import Pool from '../../Assets/icon_pool.svg?react';
 import Wifi from '../../Assets/icon_wifi.svg?react';
 import SnowFlake from '../../Assets/icon_snowflake.svg?react';
 import Balcony from '../../Assets/icon_balcony.svg?react';
-import PlusCircle from '../../Assets/plus_circle.svg?react';
+import PlusCircle from '../../Assets/plus_circle_gray.svg?react';
 
 import { NavLink } from 'react-router-dom';
 import Title from '../Utils/Title';
 const HospitalityHospedagem = () => {
+  const [show, setShowCard] = useState({ showLocation: true, showInfo: false });
   return (
     <div>
       <Header
@@ -171,12 +172,64 @@ const HospitalityHospedagem = () => {
             </div>
             <div className={styles.detalhes}>
               <div className={styles.detalheItem}>
-                <Title label="COMODIDADES" type="black" />
-                <TextContent type="black" content="" />
+                <Title label="COMODIDADES" type="black" size="small" />
+                <div>
+                  <TextContent
+                    type="medium"
+                    color="black"
+                    content="vista para a Lagoa do Santana"
+                  ></TextContent>
+                  <TextContent
+                    type="medium"
+                    color="black"
+                    content="3 camas de casal"
+                  ></TextContent>
+                  <TextContent
+                    type="medium"
+                    color="black"
+                    content="3 camas de solteiro"
+                  ></TextContent>
+                  <TextContent type="black" content="3 suítes"></TextContent>
+                  <TextContent
+                    type="medium"
+                    color="black"
+                    content="1 dormitório com banheiro exclusivo ao lado"
+                  ></TextContent>
+                  <TextContent
+                    type="medium"
+                    color="black"
+                    content="Capacidade para até 9 pessoas."
+                  ></TextContent>
+                  <TextContent
+                    type="medium"
+                    color="black"
+                    content="Cozinha completa"
+                  ></TextContent>
+                  <TextContent
+                    type="medium"
+                    color="black"
+                    content="sala de estar"
+                  ></TextContent>
+                  <TextContent
+                    type="medium"
+                    color="black"
+                    content="varanda"
+                  ></TextContent>
+                  <TextContent
+                    type="medium"
+                    color="black"
+                    content="piscina"
+                  ></TextContent>
+                  <TextContent
+                    type="medium"
+                    color="black"
+                    content="Wi-Fi fibra óptica"
+                  ></TextContent>
+                </div>
               </div>
             </div>
             <div className={styles.detalheItem}>
-              <Title label="descrição" type="black" />
+              <Title label="descrição" type="black" size="small" />
               <TextContent
                 maxCharacters="maxCharacters60"
                 type="medium"
@@ -186,31 +239,85 @@ const HospitalityHospedagem = () => {
             </div>
           </div>
           <div className={styles.localizacaoInformacoes}>
-            <div>
-              <span>Localização</span>
-              <span>Informações</span>
+            <div className={styles.menuCard}>
+              <span
+                onClick={setShowCard(() => {
+                  true, false;
+                })}
+              >
+                Localização
+              </span>
+              <span
+                onClick={setShowCard(() => {
+                  false, true;
+                })}
+              >
+                Informações
+              </span>
               <Label
                 label=""
                 iconOnly={true}
                 type="redReverse"
                 icon={PlusCircle}
                 square="squareRound"
+                size="small"
               />
             </div>
-            <div className={styles.localizacao}>
-              <div>
-                <Label
-                  label="Barrinha"
-                  size="small"
-                  square="squareRound"
-                  icon={LocationPin}
-                />
+            {showLocation && (
+              <div className={styles.localizacao}>
+                <div>
+                  <Label
+                    label="Barrinha"
+                    size="small"
+                    square="squareRound"
+                    icon={LocationPin}
+                    type="redReverse"
+                  />
+                </div>
+                <div className={styles.distancia}>00m até a praia X</div>
+                <div className={styles.mapa}>
+                  <img src="src/Assets/map_card.png" alt="Mapa" />
+                </div>
               </div>
-              <div className={styles.distancia}>00m até a praia X</div>
-              <div className={styles.mapa}></div>
-            </div>
+            )}
 
-            <div className={styles.informacoes}></div>
+            {!showLocation && (
+              <div className={styles.informacoes}>
+                <div>
+                  <Label
+                    label="Hospedagem"
+                    size="small"
+                    square="squareRound"
+                    type="redReverse"
+                  />
+                </div>
+                <div>Check In 15h / Check Out 11h</div>
+                <div>
+                  <Label
+                    label="Restrições Gerais"
+                    size="small"
+                    square="squareRound"
+                    type="redReverse"
+                  />
+                </div>
+                <div>Check In 15h / Check Out 11h</div>
+                <div>
+                  <Label
+                    label="Restrições da Casa"
+                    size="small"
+                    square="squareRound"
+                    type="redReverse"
+                  />
+                </div>
+                <div>
+                  Lorem Ipsum;
+                  <br />
+                  Lorem Ipsum;
+                  <br />
+                  Lorem Ipsum;
+                </div>
+              </div>
+            )}
             <Button label="Fale Conosco" type="red" />
           </div>
         </div>
