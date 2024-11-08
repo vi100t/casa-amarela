@@ -14,7 +14,7 @@ import ArrowRight from '../../Assets/arrow_right_paginacao_blue.svg?react';
 
 const Piawood = () => {
   return (
-    <div>
+    <div className={styles.piawoodBackground}>
       <Header
         buttonColor="greenBlue"
         className={styles.header}

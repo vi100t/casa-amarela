@@ -1,5 +1,6 @@
-body {
+.piawoodBackground {
   background-color: var(--color-blue);
+  z-index: 1;
 }
 
 .piawood {
@@ -38,6 +39,7 @@ body {
 }
 
 .cards {
+  z-index: 4;
   background-color: var(--c1);
   border: 1px solid var(--c2);
   border-radius: 2rem;
@@ -113,7 +115,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: -1;
+  z-index: 2;
 } 
 
 .passeioLabels {
@@ -223,6 +225,10 @@ body {
     position: relative;
     padding: 14rem 2rem 2rem;
   }  
+
+  .paginacao svg {
+    min-width: 2rem;
+  }
 
   .piawoodInfo img {
     position: absolute;
