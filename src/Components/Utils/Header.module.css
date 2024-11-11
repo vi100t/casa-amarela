@@ -6,6 +6,7 @@
   right: 0; 
   margin-inline: auto; 
   max-width: 100rem;
+  z-index: 9999;
 }
 
 .backgroundWhite {

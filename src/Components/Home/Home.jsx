@@ -25,6 +25,101 @@ import Footer from '../Utils/Footer';
 import CasaAmarela from '../../Assets/logo_casa_amarela.svg?react';
 
 const Home = () => {
+  function debounce(method, delay) {
+    clearTimeout(method._tId);
+    method._tId = setTimeout(function () {
+      method();
+    }, delay);
+  }
+
+  function showElements() {
+    const imagemHeader = document.getElementById('imagemHeader');
+    const casaAmarela = document.getElementById('casaAmarela');
+    const casaAmarelaEstatisticas = document.getElementById(
+      'casaAmarelaEstatisticas',
+    );
+    const hospitality = document.getElementById('hospitality');
+    const houses = document.getElementById('houses');
+    const piawood = document.getElementById('piawood');
+    const piaWoodEstatisticas = document.getElementById('piaWoodEstatisticas');
+    const eventsSpace = document.getElementById('eventsSpace');
+    const events = document.getElementById('events');
+    const yellowFilme = document.getElementById('yellowFilme');
+    const videoBanner = document.getElementById('videoBanner');
+
+    if (window.scrollY > 200) {
+      imagemHeader.className += ' ' + styles.show;
+    }
+    if (window.scrollY > 200) {
+      casaAmarela.className += ' ' + styles.show;
+    }
+    if (window.scrollY > 400) {
+      imagemHeader.className = imagemHeader.className.split('_show')[0];
+    }
+    if (window.scrollY > 400) {
+      casaAmarela.className = casaAmarela.className.split('_show')[0];
+    }
+    if (window.scrollY > 300) {
+      casaAmarelaEstatisticas.className += ' ' + styles.show;
+    }
+    if (window.scrollY > 300) {
+      hospitality.className += ' ' + styles.show;
+    }
+    if (window.scrollY > 1200) {
+      casaAmarelaEstatisticas.className =
+        casaAmarelaEstatisticas.className.split('_show')[0];
+    }
+    if (window.scrollY > 1800) {
+      hospitality.className = hospitality.className.split('_show')[0];
+    }
+    if (window.scrollY > 1000) {
+      houses.className += ' ' + styles.show;
+    }
+    if (window.scrollY > 1000) {
+      piawood.className += ' ' + styles.show;
+    }
+    if (window.scrollY > 2600) {
+      houses.className = houses.className.split('_show')[0];
+    }
+    if (window.scrollY > 3400) {
+      piawood.className = piawood.className.split('_show')[0];
+    }
+    if (window.scrollY > 2800) {
+      piaWoodEstatisticas.className += ' ' + styles.show;
+    }
+    if (window.scrollY > 3200) {
+      eventsSpace.className += ' ' + styles.show;
+    }
+    if (window.scrollY > 4200) {
+      piaWoodEstatisticas.className =
+        piaWoodEstatisticas.className.split('_show')[0];
+    }
+    if (window.scrollY > 5000) {
+      eventsSpace.className = eventsSpace.className.split('_show')[0];
+    }
+    if (window.scrollY > 3200) {
+      events.className += ' ' + styles.show;
+    }
+    if (window.scrollY > 3400) {
+      yellowFilme.className += ' ' + styles.show;
+    }
+    if (window.scrollY > 3400) {
+      videoBanner.className += ' ' + styles.show;
+    }
+    if (window.scrollY > 4600) {
+      events.className = events.className.split('_show')[0];
+    }
+    if (window.scrollY > 6400) {
+      videoBanner.className = videoBanner.className.split('_show')[0];
+    }
+    if (window.scrollY > 5800) {
+      yellowFilme.className = yellowFilme.className.split('_show')[0];
+    }
+  }
+
+  document.addEventListener('scroll', function () {
+    debounce(showElements, 100);
+  });
   return (
     <div className={`${styles.home} container`}>
       <Header
@@ -33,7 +128,10 @@ const Home = () => {
         mobileButton="transparent30"
         logo={CasaAmarela}
       ></Header>
-      <div className={styles.container}>
+      <div
+        id="imagemHeader"
+        className={`${styles.parallax} ${styles.container} ${styles.show}`}
+      >
         <img
           className={styles.desktop}
           src="src/Assets/home_1.png"
@@ -48,7 +146,10 @@ const Home = () => {
 
       <Divider />
 
-      <div className={styles.casaAmarela}>
+      <div
+        id="casaAmarela"
+        className={`${styles.parallax} ${styles.casaAmarela} ${styles.show}`}
+      >
         <div className={styles.casaAmarelaImg}>
           <img src="src\Assets\casa_amarela_coffe.jpg" alt="Café" />
           <Barrinha className={styles.casaAmarelaBarrinha} />
@@ -63,12 +164,18 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className={styles.casaAmarelaEstatisticas}>
+      <div
+        id="casaAmarelaEstatisticas"
+        className={`${styles.parallax} ${styles.casaAmarelaEstatisticas}`}
+      >
         <Divider />
         <CasaAmarelaEstatistica className={styles.casaAmarelaEstatisticas} />
         <Divider />
       </div>
-      <div className={styles.hospitality}>
+      <div
+        id="hospitality"
+        className={`${styles.parallax} ${styles.hospitality}`}
+      >
         <div className={styles.casaAmarelaInfo}>
           <div className={styles.hospitalityTitle}>
             <Label
@@ -95,7 +202,7 @@ const Home = () => {
           <HospitalityRoom />
         </div>
       </div>
-      <div className={styles.houses}>
+      <div id="houses" className={`${styles.parallax} ${styles.houses}`}>
         <img
           className={styles.housesMap}
           src="src/Assets/hospitality_map.png"
@@ -134,7 +241,7 @@ const Home = () => {
         </div>
       </div>
       <Divider />
-      <div className={styles.piawood}>
+      <div id="piawood" className={`${styles.parallax} ${styles.piawood}`}>
         <div className={styles.piawoodImg}>
           <PalmTrees />
         </div>
@@ -156,19 +263,25 @@ const Home = () => {
         </div>
       </div>
       <Divider />
-      <div className={styles.piaWoodEstatisticas}>
+      <div
+        id="piaWoodEstatisticas"
+        className={`${styles.parallax} ${styles.piaWoodEstatisticas}`}
+      >
         <img
           src="src/Assets/piawood_estatistica.png"
           alt="Estatíticas Piawood"
         />
       </div>
-      <div className={styles.eventsSpace}>
+      <div
+        id="eventsSpace"
+        className={`${styles.parallax} ${styles.eventsSpace}`}
+      >
         <Divider />
         <Divider />
         <Divider />
         <Divider />
       </div>
-      <div className={styles.events}>
+      <div id="events" className={`${styles.parallax} ${styles.events}`}>
         <Title label="Live and" type="green" />
         <Title label="experience" type="green" />
         <div>
@@ -181,7 +294,10 @@ const Home = () => {
           <img src="src/Assets/events_img_mobile.png" alt="Eventos" />
         </div>
       </div>
-      <div className={styles.yellowFilme}>
+      <div
+        id="yellowFilme"
+        className={`${styles.parallax} ${styles.yellowFilme}`}
+      >
         <div className={styles.yellowFilmeImg}>
           <LogoSea />
         </div>
@@ -207,7 +323,10 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className={styles.videoBanner}>
+      <div
+        id="videoBanner"
+        className={`${styles.parallax} ${styles.videoBanner}`}
+      >
         <img src="src/Assets/video_banner.png" alt="Video Banner" />
       </div>
       <Footer labelColor="yellowWhite" />
