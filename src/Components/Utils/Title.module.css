@@ -12,18 +12,9 @@
   color: var(--color-red);
 }
 
-.redAccent3 {
-  color: var(--color-red-accent-3);
-}
-
 .black {
   color: var(--c6);
 }
-
-.green {
-  color: var(--color-green);
-}
-
 
 .bigger {
   font-size: 6rem;

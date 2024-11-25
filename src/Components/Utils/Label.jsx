@@ -3,11 +3,9 @@ import styles from './Label.module.css';
 
 const Label = (props) => {
   return (
-    <button
-      className={`${styles.label} ${styles[props.type]} ${styles[props.size]}`}
-    >
+    <button className={`${styles.label} ${styles[props.type]}`}>
       <props.icon />
-      {!props.iconOnly && <span>{props.label}</span>}
+      props.iconOnly && {props.label}
     </button>
   );
 };
