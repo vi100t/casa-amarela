@@ -31,9 +31,18 @@ const Home = () => {
       method();
     }, delay);
   }
+  let oldValue = 0;
 
   function showElements() {
-    const imagemHeader = document.getElementById('imagemHeader');
+    let newValue = window.scrollY;
+    let scrollUp = false;
+
+    if (oldValue - newValue < 0) {
+      scrollUp = true;
+    } else if (oldValue - newValue > 0) {
+      scrollUp = false;
+    }
+
     const casaAmarela = document.getElementById('casaAmarela');
     const casaAmarelaEstatisticas = document.getElementById(
       'casaAmarelaEstatisticas',
@@ -47,73 +56,132 @@ const Home = () => {
     const yellowFilme = document.getElementById('yellowFilme');
     const videoBanner = document.getElementById('videoBanner');
 
-    if (window.scrollY > 200) {
-      imagemHeader.className += ' ' + styles.show;
-    }
-    if (window.scrollY > 200) {
-      casaAmarela.className += ' ' + styles.show;
-    }
-    if (window.scrollY > 400) {
-      imagemHeader.className = imagemHeader.className.split('_show')[0];
-    }
-    if (window.scrollY > 400) {
-      casaAmarela.className = casaAmarela.className.split('_show')[0];
-    }
-    if (window.scrollY > 300) {
-      casaAmarelaEstatisticas.className += ' ' + styles.show;
-    }
-    if (window.scrollY > 300) {
-      hospitality.className += ' ' + styles.show;
-    }
-    if (window.scrollY > 1200) {
-      casaAmarelaEstatisticas.className =
-        casaAmarelaEstatisticas.className.split('_show')[0];
-    }
-    if (window.scrollY > 1800) {
-      hospitality.className = hospitality.className.split('_show')[0];
-    }
-    if (window.scrollY > 1000) {
-      houses.className += ' ' + styles.show;
-    }
-    if (window.scrollY > 1000) {
-      piawood.className += ' ' + styles.show;
-    }
-    if (window.scrollY > 2600) {
-      houses.className = houses.className.split('_show')[0];
-    }
-    if (window.scrollY > 3400) {
-      piawood.className = piawood.className.split('_show')[0];
-    }
-    if (window.scrollY > 2800) {
-      piaWoodEstatisticas.className += ' ' + styles.show;
-    }
-    if (window.scrollY > 3200) {
-      eventsSpace.className += ' ' + styles.show;
-    }
-    if (window.scrollY > 4200) {
-      piaWoodEstatisticas.className =
-        piaWoodEstatisticas.className.split('_show')[0];
-    }
-    if (window.scrollY > 5000) {
-      eventsSpace.className = eventsSpace.className.split('_show')[0];
-    }
-    if (window.scrollY > 3200) {
-      events.className += ' ' + styles.show;
-    }
-    if (window.scrollY > 3400) {
-      yellowFilme.className += ' ' + styles.show;
-    }
-    if (window.scrollY > 3400) {
-      videoBanner.className += ' ' + styles.show;
-    }
-    if (window.scrollY > 4600) {
-      events.className = events.className.split('_show')[0];
-    }
-    if (window.scrollY > 6400) {
-      videoBanner.className = videoBanner.className.split('_show')[0];
-    }
-    if (window.scrollY > 5800) {
-      yellowFilme.className = yellowFilme.className.split('_show')[0];
+    if (true) {
+      if (newValue > 100) {
+        casaAmarela.className += ' ' + styles.show;
+      }
+      if (newValue > 400) {
+        casaAmarela.className = casaAmarela.className.split('_show')[0];
+      }
+      if (newValue > 300) {
+        casaAmarelaEstatisticas.className += ' ' + styles.show;
+      }
+      if (newValue > 300) {
+        hospitality.className += ' ' + styles.show;
+      }
+      if (newValue > 1200) {
+        casaAmarelaEstatisticas.className =
+          casaAmarelaEstatisticas.className.split('_show')[0];
+      }
+      if (newValue > 1800) {
+        hospitality.className = hospitality.className.split('_show')[0];
+      }
+      if (newValue > 1000) {
+        houses.className += ' ' + styles.show;
+      }
+      if (newValue > 1000) {
+        piawood.className += ' ' + styles.show;
+      }
+      if (newValue > 2600) {
+        houses.className = houses.className.split('_show')[0];
+      }
+      if (newValue > 3400) {
+        piawood.className = piawood.className.split('_show')[0];
+      }
+      if (newValue > 2800) {
+        piaWoodEstatisticas.className += ' ' + styles.show;
+      }
+      if (newValue > 3200) {
+        eventsSpace.className += ' ' + styles.show;
+      }
+      if (newValue > 4200) {
+        piaWoodEstatisticas.className =
+          piaWoodEstatisticas.className.split('_show')[0];
+      }
+      if (newValue > 5000) {
+        eventsSpace.className = eventsSpace.className.split('_show')[0];
+      }
+      if (newValue > 3200) {
+        events.className += ' ' + styles.show;
+      }
+      if (newValue > 3400) {
+        yellowFilme.className += ' ' + styles.show;
+      }
+      if (newValue > 3600) {
+        videoBanner.className += ' ' + styles.show;
+      }
+      if (newValue > 4600) {
+        events.className = events.className.split('_show')[0];
+      }
+      if (newValue < 3400) {
+        videoBanner.className = videoBanner.className.split('_show')[0];
+      }
+      if (newValue > 5800) {
+        yellowFilme.className = yellowFilme.className.split('_show')[0];
+      }
+    } else {
+      if (newValue > 200) {
+        casaAmarela.className += ' ' + styles.show;
+      }
+      if (newValue > 400) {
+        casaAmarela.className = casaAmarela.className.split('_show')[0];
+      }
+      if (newValue > 300) {
+        casaAmarelaEstatisticas.className += ' ' + styles.show;
+      }
+      if (newValue > 300) {
+        hospitality.className += ' ' + styles.show;
+      }
+      if (newValue > 1200) {
+        casaAmarelaEstatisticas.className =
+          casaAmarelaEstatisticas.className.split('_show')[0];
+      }
+      if (newValue > 1800) {
+        hospitality.className = hospitality.className.split('_show')[0];
+      }
+      if (newValue > 1000) {
+        houses.className += ' ' + styles.show;
+      }
+      if (newValue > 1000) {
+        piawood.className += ' ' + styles.show;
+      }
+      if (newValue > 2600) {
+        houses.className = houses.className.split('_show')[0];
+      }
+      if (newValue > 3400) {
+        piawood.className = piawood.className.split('_show')[0];
+      }
+      if (newValue > 2800) {
+        piaWoodEstatisticas.className += ' ' + styles.show;
+      }
+      if (newValue > 3200) {
+        eventsSpace.className += ' ' + styles.show;
+      }
+      if (newValue > 4200) {
+        piaWoodEstatisticas.className =
+          piaWoodEstatisticas.className.split('_show')[0];
+      }
+      if (newValue > 5000) {
+        eventsSpace.className = eventsSpace.className.split('_show')[0];
+      }
+      if (newValue > 3200) {
+        events.className += ' ' + styles.show;
+      }
+      if (newValue > 3400) {
+        yellowFilme.className += ' ' + styles.show;
+      }
+      if (newValue > 3800) {
+        videoBanner.className += ' ' + styles.show;
+      }
+      if (newValue > 4600) {
+        events.className = events.className.split('_show')[0];
+      }
+      if (newValue < 5000) {
+        videoBanner.className = videoBanner.className.split('_show')[0];
+      }
+      if (newValue > 5800) {
+        yellowFilme.className = yellowFilme.className.split('_show')[0];
+      }
     }
   }
 
@@ -128,10 +196,7 @@ const Home = () => {
         mobileButton="transparent30"
         logo={CasaAmarela}
       ></Header>
-      <div
-        id="imagemHeader"
-        className={`${styles.parallax} ${styles.container} ${styles.show}`}
-      >
+      <div id="imagemHeader" className={`${styles.container} ${styles.show}`}>
         <img
           className={styles.desktop}
           src="src/Assets/home_1.png"
