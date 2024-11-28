@@ -1,202 +1,103 @@
-import React from 'react';
-import styles from './Home.module.css';
-import Header from '../Utils/Header';
-import Divider from '../Utils/Divider';
-import Barrinha from '../../Assets/barrinha.svg?react';
-import CasaAmarelaEstatistica from '../../Assets/casa_amarela_estatistica.svg?react';
-import HospitalityRoom from '../../Assets/hospitality_room.svg?react';
-import PalmTrees from '../../Assets/palm_trees.svg?react';
-import EventsImg from '../../Assets/events_img.svg?react';
-import LogoSea from '../../Assets/logo_sea.svg?react';
-import LogoLabelRed from '../../Assets/logo_label_red.svg?react';
-import LogoLabelGreen from '../../Assets/logo_label_green.svg?react';
-import LogoLabelOrange from '../../Assets/logo_label_orange.svg?react';
-import CardButtonRight from '../../Assets/right_arrow_card.svg?react';
-import CardButtonLeft from '../../Assets/left_arrow_card.svg?react';
-import TextContent from '../Utils/TextContent';
-import Carousel from '../Utils/Carousel';
-import Title from '../Utils/Title';
-import Label from '../Utils/Label';
-import Hyperlink from '../Utils/Hyperlink';
-import SpeechBalloon from '../Utils/SpeechBalloon';
-import Card from '../Utils/Card';
-import Button from '../Utils/Button';
-import Footer from '../Utils/Footer';
-import CasaAmarela from '../../Assets/logo_casa_amarela.svg?react';
+import React, { useRef, useState } from "react";
+import styles from "./Home.module.css";
+import Header from "../Utils/Header";
+import Divider from "../Utils/Divider";
+import Barrinha from "../../Assets/barrinha.svg?react";
+import CasaAmarelaEstatistica from "../../Assets/casa_amarela_estatistica.svg?react";
+import HospitalityRoom from "../../Assets/hospitality_room.svg?react";
+import PalmTrees from "../../Assets/palm_trees.svg?react";
+import EventsImg from "../../Assets/events_img.svg?react";
+import LogoSea from "../../Assets/logo_sea.svg?react";
+import LogoLabelRed from "../../Assets/logo_label_red.svg?react";
+import LogoLabelGreen from "../../Assets/logo_label_green.svg?react";
+import LogoLabelOrange from "../../Assets/logo_label_orange.svg?react";
+import CardButtonRight from "../../Assets/right_arrow_card.svg?react";
+import CardButtonLeft from "../../Assets/left_arrow_card.svg?react";
+import TextContent from "../Utils/TextContent";
+import Carousel from "../Utils/Carousel";
+import Title from "../Utils/Title";
+import Label from "../Utils/Label";
+import Hyperlink from "../Utils/Hyperlink";
+import SpeechBalloon from "../Utils/SpeechBalloon";
+import Card from "../Utils/Card";
+import Button from "../Utils/Button";
+import Footer from "../Utils/Footer";
+import CasaAmarela from "../../Assets/logo_casa_amarela.svg?react";
 
 const Home = () => {
-  function debounce(method, delay) {
-    clearTimeout(method._tId);
-    method._tId = setTimeout(function () {
-      method();
-    }, delay);
-  }
-  let oldValue = 0;
+  const sectionRefs = useRef([]);
+  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  const [
+    isCasaAmarelaEstatisticasVisible,
+    setIsCasaAmarelaEstatisticasVisible,
+  ] = useState(false);
+  const [isPiawoodEstatisticasVisible, setIsPiawoodEstatisticasVisible] =
+    useState(false);
 
-  function showElements() {
-    let newValue = window.scrollY;
-    let scrollUp = false;
-
-    if (oldValue - newValue < 0) {
-      scrollUp = true;
-    } else if (oldValue - newValue > 0) {
-      scrollUp = false;
-    }
-
-    const casaAmarela = document.getElementById('casaAmarela');
-    const casaAmarelaEstatisticas = document.getElementById(
-      'casaAmarelaEstatisticas',
-    );
-    const hospitality = document.getElementById('hospitality');
-    const houses = document.getElementById('houses');
-    const piawood = document.getElementById('piawood');
-    const piaWoodEstatisticas = document.getElementById('piaWoodEstatisticas');
-    const eventsSpace = document.getElementById('eventsSpace');
-    const events = document.getElementById('events');
-    const yellowFilme = document.getElementById('yellowFilme');
-    const videoBanner = document.getElementById('videoBanner');
-
-    if (true) {
-      if (newValue > 100) {
-        casaAmarela.className += ' ' + styles.show;
-      }
-      if (newValue > 400) {
-        casaAmarela.className = casaAmarela.className.split('_show')[0];
-      }
-      if (newValue > 300) {
-        casaAmarelaEstatisticas.className += ' ' + styles.show;
-      }
-      if (newValue > 300) {
-        hospitality.className += ' ' + styles.show;
-      }
-      if (newValue > 1200) {
-        casaAmarelaEstatisticas.className =
-          casaAmarelaEstatisticas.className.split('_show')[0];
-      }
-      if (newValue > 1800) {
-        hospitality.className = hospitality.className.split('_show')[0];
-      }
-      if (newValue > 1000) {
-        houses.className += ' ' + styles.show;
-      }
-      if (newValue > 1000) {
-        piawood.className += ' ' + styles.show;
-      }
-      if (newValue > 2600) {
-        houses.className = houses.className.split('_show')[0];
-      }
-      if (newValue > 3400) {
-        piawood.className = piawood.className.split('_show')[0];
-      }
-      if (newValue > 2800) {
-        piaWoodEstatisticas.className += ' ' + styles.show;
-      }
-      if (newValue > 3200) {
-        eventsSpace.className += ' ' + styles.show;
-      }
-      if (newValue > 4200) {
-        piaWoodEstatisticas.className =
-          piaWoodEstatisticas.className.split('_show')[0];
-      }
-      if (newValue > 5000) {
-        eventsSpace.className = eventsSpace.className.split('_show')[0];
-      }
-      if (newValue > 3200) {
-        events.className += ' ' + styles.show;
-      }
-      if (newValue > 3400) {
-        yellowFilme.className += ' ' + styles.show;
-      }
-      if (newValue > 3600) {
-        videoBanner.className += ' ' + styles.show;
-      }
-      if (newValue > 4600) {
-        events.className = events.className.split('_show')[0];
-      }
-      if (newValue < 3400) {
-        videoBanner.className = videoBanner.className.split('_show')[0];
-      }
-      if (newValue > 5800) {
-        yellowFilme.className = yellowFilme.className.split('_show')[0];
-      }
-    } else {
-      if (newValue > 200) {
-        casaAmarela.className += ' ' + styles.show;
-      }
-      if (newValue > 400) {
-        casaAmarela.className = casaAmarela.className.split('_show')[0];
-      }
-      if (newValue > 300) {
-        casaAmarelaEstatisticas.className += ' ' + styles.show;
-      }
-      if (newValue > 300) {
-        hospitality.className += ' ' + styles.show;
-      }
-      if (newValue > 1200) {
-        casaAmarelaEstatisticas.className =
-          casaAmarelaEstatisticas.className.split('_show')[0];
-      }
-      if (newValue > 1800) {
-        hospitality.className = hospitality.className.split('_show')[0];
-      }
-      if (newValue > 1000) {
-        houses.className += ' ' + styles.show;
-      }
-      if (newValue > 1000) {
-        piawood.className += ' ' + styles.show;
-      }
-      if (newValue > 2600) {
-        houses.className = houses.className.split('_show')[0];
-      }
-      if (newValue > 3400) {
-        piawood.className = piawood.className.split('_show')[0];
-      }
-      if (newValue > 2800) {
-        piaWoodEstatisticas.className += ' ' + styles.show;
-      }
-      if (newValue > 3200) {
-        eventsSpace.className += ' ' + styles.show;
-      }
-      if (newValue > 4200) {
-        piaWoodEstatisticas.className =
-          piaWoodEstatisticas.className.split('_show')[0];
-      }
-      if (newValue > 5000) {
-        eventsSpace.className = eventsSpace.className.split('_show')[0];
-      }
-      if (newValue > 3200) {
-        events.className += ' ' + styles.show;
-      }
-      if (newValue > 3400) {
-        yellowFilme.className += ' ' + styles.show;
-      }
-      if (newValue > 3800) {
-        videoBanner.className += ' ' + styles.show;
-      }
-      if (newValue > 4600) {
-        events.className = events.className.split('_show')[0];
-      }
-      if (newValue < 5000) {
-        videoBanner.className = videoBanner.className.split('_show')[0];
-      }
-      if (newValue > 5800) {
-        yellowFilme.className = yellowFilme.className.split('_show')[0];
+  const handleScroll = (event) => {
+    const currentSection = sectionRefs.current[currentSectionIndex];
+    if (currentSection) {
+      const { scrollTop, scrollHeight, clientHeight } = currentSection;
+      if (
+        (event.deltaY > 0 && scrollTop + clientHeight < scrollHeight) ||
+        (event.deltaY < 0 && scrollTop > 0)
+      ) {
+        currentSection.scrollTop += event.deltaY;
+      } else {
+        if (
+          event.deltaY > 0 &&
+          scrollTop + clientHeight >= scrollHeight &&
+          currentSectionIndex < sectionRefs.current.length - 1
+        ) {
+          setCurrentSectionIndex(currentSectionIndex + 1);
+          scrollToSection(currentSectionIndex + 1);
+        } else if (
+          event.deltaY < 0 &&
+          scrollTop === 0 &&
+          currentSectionIndex > 0
+        ) {
+          setCurrentSectionIndex(currentSectionIndex - 1);
+          scrollToSection(currentSectionIndex - 1);
+        }
       }
     }
-  }
+  };
 
-  document.addEventListener('scroll', function () {
-    debounce(showElements, 100);
-  });
+  const handleCasaAmarelaScroll = (event) => {
+    const scrollTop = event.target.scrollTop;
+    if (scrollTop > 2) {
+      setIsCasaAmarelaEstatisticasVisible(true);
+    } else if (scrollTop === 0) {
+      setIsCasaAmarelaEstatisticasVisible(false);
+    }
+  };
+
+  const handlePiawoodScroll = (event) => {
+    const scrollTop = event.target.scrollTop;
+    if (scrollTop > 5) {
+      setIsPiawoodEstatisticasVisible(true);
+    } else if (scrollTop === 0) {
+      setIsPiawoodEstatisticasVisible(false);
+    }
+  };
+
+  const scrollToSection = (index) => {
+    sectionRefs.current[index].scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className={`${styles.home} container`}>
+    <div onWheel={handleScroll} className={`${styles.home} container`}>
       <Header
         buttonColor="yellow"
         className={styles.header}
         mobileButton="transparent30"
         logo={CasaAmarela}
-      ></Header>
-      <div id="imagemHeader" className={`${styles.container} ${styles.show}`}>
+      />
+      <section
+        ref={(el) => (sectionRefs.current[0] = el)}
+        id="imagemHeader"
+        className={`${styles.container} ${styles.section}`}
+      >
         <img
           className={styles.desktop}
           src="src/Assets/home_1.png"
@@ -207,41 +108,47 @@ const Home = () => {
           src="src/Assets/home_1_mobile.png"
           alt="Quarto"
         />
-      </div>
-
-      <Divider />
-
-      <div
-        id="casaAmarela"
-        className={`${styles.parallax} ${styles.casaAmarela} ${styles.show}`}
+      </section>
+      <section
+        ref={(el) => (sectionRefs.current[1] = el)}
+        className={`${styles.container} ${styles.section} ${styles.casaAmarelaSection}`}
+        onScroll={handleCasaAmarelaScroll}
       >
-        <div className={styles.casaAmarelaImg}>
-          <img src="src\Assets\casa_amarela_coffe.jpg" alt="Café" />
-          <Barrinha className={styles.casaAmarelaBarrinha} />
-          <Carousel />
+        <div
+          className={`${styles.casaAmarelaImg} ${
+            isCasaAmarelaEstatisticasVisible ? styles.hidden : ""
+          }`}
+        >
+          <div>
+            <img src="src/Assets/casa_amarela_coffe.jpg" alt="Café" />
+            <Barrinha className={styles.casaAmarelaBarrinha} />
+            <Carousel />
+          </div>
         </div>
-        <div className={styles.casaAmarelaInfo}>
-          <Title label="CASA AMARELA" type="yellow" />
-          <TextContent
-            type="black"
-            content="A Casa Amarela é um ecossistema de turismo que busca impulsionar o desenvolvimento de Barrinha, PI, por meio de ações estruturantes de promoção à cultura, educação e inclusão produtiva."
-            maxCharacters="maxCharacters40"
-          />
+        <div
+          className={`${styles.casaAmarelaEstatisticas} ${
+            isCasaAmarelaEstatisticasVisible ? styles.visible : ""
+          }`}
+        >
+          <CasaAmarelaEstatistica />
         </div>
-      </div>
-      <div
-        id="casaAmarelaEstatisticas"
-        className={`${styles.parallax} ${styles.casaAmarelaEstatisticas}`}
-      >
-        <Divider />
-        <CasaAmarelaEstatistica className={styles.casaAmarelaEstatisticas} />
-        <Divider />
-      </div>
-      <div
+        <div className={styles.casaAmarelaInfoContainer}>
+          <div className={styles.casaAmarelaInfo}>
+            <Title label="CASA AMARELA" type="yellow" />
+            <TextContent
+              type="black"
+              content="A Casa Amarela é um ecossistema de turismo que busca impulsionar o desenvolvimento de Barrinha, PI, por meio de ações estruturantes de promoção à cultura, educação e inclusão produtiva."
+              maxCharacters="maxCharacters30"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        ref={(el) => (sectionRefs.current[2] = el)}
         id="hospitality"
-        className={`${styles.parallax} ${styles.hospitality}`}
+        className={`${styles.parallax} ${styles.hospitality} ${styles.section}`}
       >
-        <div className={styles.casaAmarelaInfo}>
+        <div className={styles.hospitalityInfo}>
           <div className={styles.hospitalityTitle}>
             <Label
               label="Hospitality"
@@ -251,7 +158,6 @@ const Home = () => {
             />
             <Title label="Live and experience" type="redAccent3" />
           </div>
-
           <TextContent
             type="redAccent2"
             content="A Casa Amarela oferece casas e vilas na costa do Piauí, proporcionando uma experiência única. Com foco em turismo sustentável e comunitário, todas as atividades são personalizadas. Os visitantes podem desfrutar de atividades exclusivas, vistas deslumbrantes e conexões autênticas com a cultura e as pessoas locais."
@@ -266,8 +172,12 @@ const Home = () => {
         <div className={styles.hospitalityRoom}>
           <HospitalityRoom />
         </div>
-      </div>
-      <div id="houses" className={`${styles.parallax} ${styles.houses}`}>
+      </section>
+      <section
+        ref={(el) => (sectionRefs.current[3] = el)}
+        id="houses"
+        className={`${styles.parallax} ${styles.houses} ${styles.section}`}
+      >
         <img
           className={styles.housesMap}
           src="src/Assets/hospitality_map.png"
@@ -304,69 +214,78 @@ const Home = () => {
             <CardButtonRight className={styles.cardButtons} />
           </div>
         </div>
-      </div>
-      <Divider />
-      <div id="piawood" className={`${styles.parallax} ${styles.piawood}`}>
-        <div className={styles.piawoodImg}>
+      </section>
+      <section
+        ref={(el) => (sectionRefs.current[4] = el)}
+        className={`${styles.section} ${styles.piawoodSection}`}
+        onScroll={handlePiawoodScroll}
+      >
+        <div
+          className={`${styles.piawoodImg} ${
+            isPiawoodEstatisticasVisible ? styles.hidden : ""
+          }`}
+        >
           <PalmTrees />
         </div>
-        <div className={styles.casaAmarelaInfo}>
-          <div className={styles.hospitalityTitle}>
-            <Label
-              label="Piawood"
-              type="blue"
-              icon={LogoLabelGreen}
-              border="squareRound"
-            />
-          </div>
-
-          <TextContent
-            type="black"
-            content="Piawood é o hub cultural da Casa Amarela, dedicado ao fomento da cultura e talentos locais na região de Barrinha, PI. Atuando como curador e plataforma de crescimento, Piawood promove eventos que integram música, artes visuais, gastronomia e esporte, gerando impacto na cena cultural da região. Além disso, a produtora Yellow Filme cria conteúdos audiovisuais que documentam e divulgam essas experiências, conectando a riqueza cultural local a um público mais amplo."
-            maxCharacters="maxCharacters30"
+        <div
+          className={`${styles.piaWoodEstatisticas} ${
+            isPiawoodEstatisticasVisible ? styles.visible : ""
+          }`}
+        >
+          <img
+            src="src/Assets/piawood_estatistica.png"
+            alt="Estatísticas Piawood"
           />
         </div>
-      </div>
-      <Divider />
-      <div
-        id="piaWoodEstatisticas"
-        className={`${styles.parallax} ${styles.piaWoodEstatisticas}`}
+        <div className={styles.piawoodInfoContainer}>
+          <div className={styles.piawoodInfo}>
+            <div className={styles.hospitalityTitle}>
+              <Label
+                label="Piawood"
+                type="blue"
+                icon={LogoLabelGreen}
+                border="squareRound"
+              />
+            </div>
+            <TextContent
+              type="black"
+              content="Piawood é o hub cultural da Casa Amarela, dedicado ao fomento da cultura e talentos locais na região de Barrinha, PI. Atuando como curador e plataforma de crescimento, Piawood promove eventos que integram música, artes visuais, gastronomia e esporte, gerando impacto na cena cultural da região. Além disso, a produtora Yellow Filme cria conteúdos audiovisuais que documentam e divulgam essas experiências, conectando a riqueza cultural local a um público mais amplo."
+              maxCharacters="maxCharacters30"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        ref={(el) => (sectionRefs.current[5] = el)}
+        className={`${styles.section} ${styles.eventsSection}`}
       >
-        <img
-          src="src/Assets/piawood_estatistica.png"
-          alt="Estatíticas Piawood"
-        />
-      </div>
-      <div
-        id="eventsSpace"
-        className={`${styles.parallax} ${styles.eventsSpace}`}
-      >
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-      </div>
-      <div id="events" className={`${styles.parallax} ${styles.events}`}>
-        <Title label="Live and" type="green" />
-        <Title label="experience" type="green" />
-        <div>
-          <Button label="Ver eventos" type="green" />
+        <div
+          id="eventsSpace"
+          className={`${styles.parallax} ${styles.eventsSpace}`}
+        ></div>
+        <div id="events" className={`${styles.parallax} ${styles.events}`}>
+          <Title label="Live and" type="green" />
+          <Title label="experience" type="green" />
+          <div>
+            <Button label="Ver eventos" type="green" />
+          </div>
+          <div className={styles.eventsImg}>
+            <EventsImg />
+          </div>
+          <div className={styles.eventsImgMobile}>
+            <img src="src/Assets/events_img_mobile.png" alt="Eventos" />
+          </div>
         </div>
-        <div className={styles.eventsImg}>
-          <EventsImg />
-        </div>
-        <div className={styles.eventsImgMobile}>
-          <img src="src/Assets/events_img_mobile.png" alt="Eventos" />
-        </div>
-      </div>
-      <div
+      </section>
+      <section
+        ref={(el) => (sectionRefs.current[6] = el)}
         id="yellowFilme"
-        className={`${styles.parallax} ${styles.yellowFilme}`}
+        className={`${styles.parallax} ${styles.yellowFilme} ${styles.section}`}
       >
         <div className={styles.yellowFilmeImg}>
           <LogoSea />
         </div>
-        <div className={styles.casaAmarelaInfo}>
+        <div className={styles.hospitalityInfo}>
           <div className={styles.hospitalityTitle}>
             <Label
               label="Yellow Filme"
@@ -377,7 +296,7 @@ const Home = () => {
           </div>
           <TextContent
             type="blackBrown"
-            content="A Yellow Filme é a produtora audiovisual da Casa Amarela, focada em promover as atividades do hub cultural Piawood         e do projeto de hospitalidade. A empresa atua em duas frentes: produção interna, criando conteúdos para divulgação e marketing, e serviços externos, oferecendo expertise local para marcas que buscam produções na região do Piauí. Com um foco regional, a Yellow Filme valoriza a cultura, os talentos e os cenários locais, criando conteúdos autênticos e de alto impacto visual."
+            content="A Yellow Filme é a produtora audiovisual da Casa Amarela, focada em promover as atividades do hub cultural Piawood e do projeto de hospitalidade. A empresa atua em duas frentes: produção interna, criando conteúdos para divulgação e marketing, e serviços externos, oferecendo expertise local para marcas que buscam produções na região do Piauí. Com um foco regional, a Yellow Filme valoriza a cultura, os talentos e os cenários locais, criando conteúdos autênticos e de alto impacto visual."
             maxCharacters="maxCharacters30"
           />
           <Hyperlink
@@ -387,13 +306,14 @@ const Home = () => {
             arrowColor="arrowOrange"
           />
         </div>
-      </div>
-      <div
+      </section>
+      <section
+        ref={(el) => (sectionRefs.current[7] = el)}
         id="videoBanner"
-        className={`${styles.parallax} ${styles.videoBanner}`}
+        className={`${styles.parallax} ${styles.videoBanner} ${styles.section}`}
       >
         <img src="src/Assets/video_banner.png" alt="Video Banner" />
-      </div>
+      </section>
       <Footer labelColor="yellowWhite" />
     </div>
   );
