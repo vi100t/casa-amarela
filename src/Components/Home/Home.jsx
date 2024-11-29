@@ -180,7 +180,7 @@ const Home = () => {
             <Title label="CASA AMARELA" type="yellow" />
             <TextContent
               type="black"
-              content="A Casa Amarela é um ecossistema de turismo que busca impulsionar o desenvolvimento de Barrinha, PI, por meio de ações estruturantes de promoção à cultura, educação e inclusão produtiva."
+              content="A Casa Amarela é um projeto que conecta turismo, comunidade e sustentabilidade em Barrinha, PI. Nosso objetivo é contribuir para o desenvolvimento da região, promovendo educação, cultura e iniciativas que impulsionem a economia local de forma colaborativa e consciente."
               maxCharacters="maxCharacters30"
             />
           </div>
@@ -203,7 +203,7 @@ const Home = () => {
           </div>
           <TextContent
             type="redAccent2"
-            content="A Casa Amarela oferece casas e vilas na costa do Piauí, proporcionando uma experiência única. Com foco em turismo sustentável e comunitário, todas as atividades são personalizadas. Os visitantes podem desfrutar de atividades exclusivas, vistas deslumbrantes e conexões autênticas com a cultura e as pessoas locais."
+            content="A Casa Amarela oferece casas na costa do Piauí, criando experiências aconchegantes e autênticas. Valorizamos o turismo sustentável e comunitário, com atividades personalizadas para cada visitante. Aqui, você pode aproveitar paisagens incríveis, vivências únicas e se conectar de verdade com a cultura e as pessoas da região."
             maxCharacters="maxCharacters30"
           />
           <Hyperlink

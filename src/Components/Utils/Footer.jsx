@@ -17,32 +17,34 @@ const Footer = (props) => {
         <LogoFooter />
       </div>
       <div className={styles.linkGroup}>
-        <NavLink className={styles.link}>
+        <NavLink className={styles.link} to="/HospitalityHospedagem">
           Hospitality
           <ArrowRightFooter />
         </NavLink>
-        <NavLink className={styles.link}>
+        <NavLink className={styles.link} to="/Piawood">
           Piawood
           <ArrowRightFooter />
         </NavLink>
-        <NavLink className={styles.link}>
+        <NavLink className={styles.link} to="/YellowFilme">
           Yellow Filme
           <ArrowRightFooter />
         </NavLink>
-        <NavLink className={styles.link}>
+        <NavLink className={styles.link} to="/Informacoes">
           Informações
           <ArrowRightFooter />
         </NavLink>
       </div>
       <div className={styles.labelGroup}>
-        <Label
+       <a href="http://Wa.me/5586999866447"><Label
           label="WhatsApp"
           type={props.labelColor}
           icon={WhatsAppIcon}
           size="small"
           border="square"
           clickable="clickable"
-        />
+        /></a>
+        <a href="https://www.instagram.com/casaamarelapiaui?igsh=ZWN3eWRtd3hlaGdh">
+
         <Label
           label="Instagram"
           type={props.labelColor}
@@ -51,14 +53,8 @@ const Footer = (props) => {
           border="square"
           clickable="clickable"
         />
-        <Label
-          label="Twitter"
-          type={props.labelColor}
-          icon={TwitterIcon}
-          size="small"
-          border="square"
-          clickable="clickable"
-        />
+        </a>
+        
       </div>
     </div>
   );

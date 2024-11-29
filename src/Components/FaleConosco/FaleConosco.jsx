@@ -40,6 +40,7 @@ const FaleConosco = () => {
           />
           <div className={styles.labelGroup}>
             <div>
+              <a href="http://Wa.me/5586999866447">
               <Label
                 label="WhatsApp"
                 type="yellowWhite"
@@ -48,8 +49,10 @@ const FaleConosco = () => {
                 border="square"
                 clickable="clickable"
               />
+              </a>
             </div>
             <div>
+              <a href="https://www.instagram.com/casaamarelapiaui?igsh=ZWN3eWRtd3hlaGdh">
               <Label
                 label="Instagram"
                 type="yellowWhite"
@@ -58,16 +61,8 @@ const FaleConosco = () => {
                 border="square"
                 clickable="clickable"
               />
-            </div>
-            <div>
-              <Label
-                label="Twitter"
-                type="yellowWhite"
-                icon={TwitterIcon}
-                size="small"
-                border="square"
-                clickable="clickable"
-              />
+              </a>
+              
             </div>
           </div>
           <div className={styles.desktop}>
