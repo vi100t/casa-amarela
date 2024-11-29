@@ -1,5 +1,7 @@
 .yellowFilme {
-  padding: 0rem 1.5rem
+  padding: 0rem 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 .yellowFilmeHist {
   padding: 3rem 6rem;
