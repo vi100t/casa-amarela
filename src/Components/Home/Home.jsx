@@ -168,7 +168,7 @@ const Home = () => {
             isCasaAmarelaEstatisticasVisible ? styles.hidden : ""
           }`}
         >
-          <div>
+          <div className={styles.casaAmarelaDiv}>
             <img src="src/Assets/casa_amarela_coffe.jpg" alt="Café" />
             <Barrinha className={styles.casaAmarelaBarrinha} />
             <Carousel />

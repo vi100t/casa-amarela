@@ -432,14 +432,14 @@
 .leftCurtain {
   left: 0;
   transform: translateX(0);
-  background: url("/src/Assets/curtain_left.png")  no-repeat;
+  background: url("/src/Assets/curtain_left.png") no-repeat;
   background-size: 100% 100%;
 }
 
 .rightCurtain {
   right: 0;
   transform: translateX(0);
-  background: url("/src/Assets/curtain_right.png")  no-repeat;
+  background: url("/src/Assets/curtain_right.png") no-repeat;
   background-size: 100% 100%;
 }
 
@@ -519,6 +519,7 @@
     flex-direction: column-reverse;
     padding: 1rem 3rem;
     gap: 1rem;
+    justify-content: space-evenly;
   }
   .casaAmarelaBarrinha {
     position: absolute;
@@ -529,8 +530,8 @@
   .casaAmarelaImg img {
     border-radius: 2rem;
   }
-  .casaAmarela > div {
-position: relative;
+  .casaAmarelaDiv {
+    position: relative;
   }
   .casaAmarelaInfoContainer {
     justify-content: center;
@@ -539,6 +540,7 @@ position: relative;
   }
   .casaAmarelaImg {
     width: 100%;
+    height: auto;
     position: relative;
     left: 0;
     padding: 0rem 10rem;
@@ -686,8 +688,7 @@ position: relative;
     flex-direction: column-reverse;
     background-color: var(--color-orange-accent);
     background-image: none;
-    padding: 1rem 1rem;
-    gap: 1rem;
+    
   }
 
   .yellowFilmeImg svg {
@@ -696,5 +697,11 @@ position: relative;
 
   .videoBanner {
     flex-direction: column;
+  }
+
+  .curtainContent {
+    flex-direction: column-reverse;
+    padding: 1rem 1rem;
+    gap: 4rem;
   }
 }
