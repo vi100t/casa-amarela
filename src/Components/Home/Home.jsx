@@ -372,7 +372,6 @@ const Home = () => {
         <img src="src/Assets/video_banner.png" alt="Video Banner" />
         <Footer labelColor="yellowWhite" />
       </section>
-      <Footer labelColor="yellowWhite" />
     </div>
   );
 };

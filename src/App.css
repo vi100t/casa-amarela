@@ -54,7 +54,7 @@ button, input {
 }
 
 .container {
-  max-width: 100rem;
+  /* max-width: 100rem; */
   padding: 0.25rem 0rem;
   margin: 0 auto;
 }
