@@ -121,7 +121,7 @@ const YellowFilme = () => {
         </div>
       </div>
 
-      <div className={styles.yellowFilmesCardsGroup}>
+      {/* <div className={styles.yellowFilmesCardsGroup}>
         <div className={styles.yellowFilmesCards}>
           <LogoLabelOrange />
           Roteiros
@@ -161,11 +161,11 @@ const YellowFilme = () => {
         <div className={styles.yellowFilmesCards}>
           <PlusCircle />E mais!
         </div>
-      </div>
+      </div> */}
       <div className={styles.videoBanner}>
         <img src="src/Assets/video_banner.png" alt="Video Banner" />
       </div>
-      <div className={styles.equipe}>
+      {/* <div className={styles.equipe}>
         Equipe
         <div className={styles.membrosEquipe}>
           <div className={styles.membroEquipe}>
@@ -252,7 +252,7 @@ const YellowFilme = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Footer labelColor="redWhite" />
     </div>
