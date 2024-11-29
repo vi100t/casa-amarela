@@ -115,6 +115,13 @@ const Home = () => {
         onScroll={handleCasaAmarelaScroll}
       >
         <div
+          className={`${styles.casaAmarelaEstatisticas} ${
+            isCasaAmarelaEstatisticasVisible ? styles.visible : ""
+          }`}
+        >
+          <CasaAmarelaEstatistica />
+        </div>
+        <div
           className={`${styles.casaAmarelaImg} ${
             isCasaAmarelaEstatisticasVisible ? styles.hidden : ""
           }`}
@@ -125,13 +132,7 @@ const Home = () => {
             <Carousel />
           </div>
         </div>
-        <div
-          className={`${styles.casaAmarelaEstatisticas} ${
-            isCasaAmarelaEstatisticasVisible ? styles.visible : ""
-          }`}
-        >
-          <CasaAmarelaEstatistica />
-        </div>
+
         <div className={styles.casaAmarelaInfoContainer}>
           <div className={styles.casaAmarelaInfo}>
             <Title label="CASA AMARELA" type="yellow" />
@@ -221,14 +222,7 @@ const Home = () => {
         onScroll={handlePiawoodScroll}
       >
         <div
-          className={`${styles.piawoodImg} ${
-            isPiawoodEstatisticasVisible ? styles.hidden : ""
-          }`}
-        >
-          <PalmTrees />
-        </div>
-        <div
-          className={`${styles.piaWoodEstatisticas} ${
+          className={`${styles.desktop} ${styles.piaWoodEstatisticas} ${
             isPiawoodEstatisticasVisible ? styles.visible : ""
           }`}
         >
@@ -237,6 +231,14 @@ const Home = () => {
             alt="Estatísticas Piawood"
           />
         </div>
+        <div
+          className={`${styles.piawoodImg} ${
+            isPiawoodEstatisticasVisible ? styles.hidden : ""
+          }`}
+        >
+          <PalmTrees />
+        </div>
+
         <div className={styles.piawoodInfoContainer}>
           <div className={styles.piawoodInfo}>
             <div className={styles.hospitalityTitle}>
@@ -262,7 +264,14 @@ const Home = () => {
         <div
           id="eventsSpace"
           className={`${styles.parallax} ${styles.eventsSpace}`}
-        ></div>
+        >
+          <div className={`${styles.mobile} ${styles.piaWoodEstatisticas} `}>
+            <img
+              src="src/Assets/piawood_estatistica.png"
+              alt="Estatísticas Piawood"
+            />
+          </div>
+        </div>
         <div id="events" className={`${styles.parallax} ${styles.events}`}>
           <Title label="Live and" type="green" />
           <Title label="experience" type="green" />
@@ -313,8 +322,8 @@ const Home = () => {
         className={`${styles.parallax} ${styles.videoBanner} ${styles.section}`}
       >
         <img src="src/Assets/video_banner.png" alt="Video Banner" />
+        <Footer labelColor="yellowWhite" />
       </section>
-      <Footer labelColor="yellowWhite" />
     </div>
   );
 };

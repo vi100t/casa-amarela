@@ -220,7 +220,7 @@
   display: flex;
   position: relative;
   height: 100vh;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .casaAmarelaImg,
@@ -273,7 +273,7 @@
 .piaWoodEstatisticas svg {
   padding: 0;
   width: 100%;
-} 
+}
 
 .piawoodSection {
   display: flex;
@@ -290,7 +290,8 @@
   left: 10%;
   width: 50%;
   height: 100%;
-  transition: height 1s ease-in-out, transform 1s ease-in-out, opacity 1s ease-in-out;
+  transition: height 1s ease-in-out, transform 1s ease-in-out,
+    opacity 1s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -313,7 +314,7 @@
 .piaWoodEstatisticas {
   transform: translateY(100%);
   opacity: 0;
-height: 0;
+  height: 0;
 }
 
 .piaWoodEstatisticas.visible {
@@ -388,7 +389,7 @@ height: 0;
 }
 
 .desktop {
-  display: block;
+  display: flex;
 }
 
 .yellowFilme {
@@ -396,11 +397,12 @@ height: 0;
   gap: 3.5rem;
   padding: 3rem 6rem;
   background: url("src/Assets/background_yellow_films.svg") no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   justify-content: center;
 }
 
 .videoBanner {
+  flex-direction: column;
   padding: 0.5rem;
 }
 
@@ -413,7 +415,16 @@ height: 0;
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
+  .casaAmarelaImg,
+  .casaAmarelaEstatisticas,
+  .piawoodImg,
+  .piaWoodEstatisticas {
+    transition: none;
+    transform: none;
+    opacity: 1;
+    position: static;
+  }
   .casaAmarela {
     flex-direction: column-reverse;
     padding: 0rem 3rem;
@@ -426,6 +437,11 @@ height: 0;
 
   .container {
     padding: 0.25rem 0.5rem;
+  }
+
+  .container img {
+    width: 100%;
+    /* height: auto; */
   }
 
   .mobile {
@@ -443,189 +459,58 @@ height: 0;
 
   .casaAmarelaInfo {
     align-items: center;
-  }
-
-  .hospitalityInfo {
-    align-items: center;
-  }
-
-  .casaAmarelaBarrinha {
-    position: absolute;
-    top: -5rem;
-    left: -3rem;
-    width: 15rem;
-  }
-
-  .casaAmarelaEstatisticas {
-    width: 100%;
-    height: auto;
-    padding: 0rem 3rem;
-  }
-
-  .hospitality {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 3rem 3rem;
-  }
-  .hospitalityTitle {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .hospitalityRoom svg {
-    max-width: 100%;
-    height: min-content;
-    padding: 2rem 0rem;
-  }
-
-  .housesMap {
-    content: url("/src/Assets/hospitality_map_mobile.svg");
-    padding: 0.25rem 0.5rem;
-  }
-
-  .casaBaete,
-  .casaBruxa,
-  .casaCaju,
-  .casaCamua,
-  .casaDecker,
-  .casaRio,
-  .casaSal {
-    display: none;
-  }
-
-  .cardReserva {
-    width: 100%;
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .cardReservaMobile {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  .cardButtons {
-    display: block;
-  }
-
-  .piawood {
-    flex-direction: column-reverse;
-    padding: 1rem 3rem;
-  }
-
-  .piawoodImg svg {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .piaWoodEstatisticas {
-    display: flex;
-    padding: 0rem 3rem;
-    max-width: 100%;
-  }
-
-  .piaWoodEstatisticas svg {
     height: 100%;
-    width: auto;
-  }
-
-  .eventsSpace {
-    display: none;
-  }
-
-  .events {
-    display: flex;
-    padding: 3rem 1rem;
-    max-width: 100%;
-    align-items: flex-start;
-    margin-top: 3rem;
-  }
-
-  .eventsImg {
-    display: none;
-  }
-
-  .eventsImgMobile {
-    display: block;
-    max-width: 100%;
-    right: 5%;
-    bottom: 0;
-  }
-
-  .yellowFilme {
-    flex-direction: column-reverse;
-    background-color: var(--color-orange-accent);
-    background-image: none;
-    padding: 3rem 1rem;
-    gap: 3rem;
-  }
-
-  .yellowFilmeImg svg {
-    width: 100%;
-    height: min-content;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-  .container {
-    max-width: 100rem;
-    padding: 0.25rem 0.5rem;
-  }
-
-  .mobile {
-    display: block;
-  }
-
-  .desktop {
-    display: none;
-  }
-
-  .casaAmarela {
-    flex-direction: column-reverse;
-    padding: 0rem 3rem;
-    gap: 2rem;
-  }
-
-  .casaAmarela img {
-    border-radius: 1rem;
-    margin-top: 2rem;
-  }
-
-  .casaAmarelaInfo {
-    align-items: center;
+    padding: 0;
   }
 
   .hospitalityInfo {
     align-items: center;
+    height: auto;
   }
 
+  .casaAmarelaSection {
+    flex-direction: column-reverse;
+    padding: 1rem 3rem;
+    gap: 1rem;
+  }
   .casaAmarelaBarrinha {
     position: absolute;
-    top: -5rem;
-    left: -3rem;
-    width: 15rem;
+    top: -5.5rem;
+    left: -6rem;
+    width: 25rem;
   }
-
+  .casaAmarelaImg img {
+    border-radius: 2rem;
+  }
+  .casaAmarela > div {
+position: relative;
+  }
+  .casaAmarelaInfoContainer {
+    justify-content: center;
+    height: min-content;
+    padding: 0rem 3rem;
+  }
+  .casaAmarelaImg {
+    width: 100%;
+    position: relative;
+    left: 0;
+    padding: 0rem 10rem;
+  }
   .casaAmarelaEstatisticas {
     width: 100%;
-    height: auto;
-    padding: 0rem 3rem;
+    height: min-content;
+    padding: 0rem 10rem;
+    left: 0;
+    transform: none;
+  }
+  .casaAmarelaEstatisticas svg {
+    width: 100%;
+    height: min-content;
   }
 
   .hospitality {
     flex-direction: column;
-    gap: 1rem;
+    gap: 3rem;
     padding: 3rem 3rem;
   }
   .hospitalityTitle {
@@ -640,7 +525,7 @@ height: 0;
   }
 
   .housesMap {
-    content: url("/src/Assets/hospitality_map_mobile.svg");
+    background: url("/src/Assets/hospitality_map_mobile.svg") center no-repeat;
     padding: 0.25rem 0.5rem;
   }
 
@@ -679,29 +564,56 @@ height: 0;
     display: block;
   }
 
+  .piawoodSection {
+    flex-direction: column-reverse;
+    padding: 3rem;
+  }
+
+  .piawoodInfoContainer {
+    justify-content: center;
+    height: min-content;
+    gap: 1rem;
+  }
+
+  .piawoodInfo {
+    padding: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
   .piawood {
     flex-direction: column-reverse;
     padding: 1rem 3rem;
   }
 
   .piawoodImg svg {
-    max-width: 100%;
     height: auto;
+    width: 50%;
+  }
+
+  .piawoodImg {
+    width: 100%;
+    position: relative;
+    left: 0;
   }
 
   .piaWoodEstatisticas {
-    display: flex;
+    width: 100%;
+    height: 100%;
     padding: 0rem 3rem;
-    max-width: 100%;
+    position: relative;
+    left: 0;
   }
 
-  .piaWoodEstatisticas svg {
-    width: 100%;
-    height: auto;
+  .piaWoodEstatisticas img {
+    height: 100%;
+    left: 0;
   }
 
   .eventsSpace {
-    display: none;
+    /* display: none; */
+    height: 100%;
   }
 
   .events {
@@ -709,7 +621,7 @@ height: 0;
     padding: 3rem 1rem;
     max-width: 100%;
     align-items: flex-start;
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 
   .eventsImg {
@@ -727,171 +639,15 @@ height: 0;
     flex-direction: column-reverse;
     background-color: var(--color-orange-accent);
     background-image: none;
-    padding: 3rem 1rem;
-    gap: 3rem;
+    padding: 1rem 1rem;
+    gap: 1rem;
   }
 
   .yellowFilmeImg svg {
     width: 100%;
-    height: min-content;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 1000px) {
-  .container {
-    max-width: 100rem;
-    padding: 0.25rem 0.5rem;
-  }
-  .mobile {
-    display: block;
   }
 
-  .desktop {
-    display: none;
-  }
-
-  .casaAmarela {
-    flex-direction: column-reverse;
-    padding: 0rem 3rem;
-    gap: 2rem;
-  }
-
-  .casaAmarela img {
-    border-radius: 1rem;
-    margin-top: 2rem;
-  }
-
-  .casaAmarelaInfo {
-    align-items: center;
-  }
-
-  .hospitalityInfo {
-    align-items: center;
-  }
-
-  .casaAmarelaBarrinha {
-    position: absolute;
-    top: -5rem;
-    left: -3rem;
-    width: 15rem;
-  }
-
-  .casaAmarelaEstatisticas {
-    width: 100%;
-    height: auto;
-    padding: 0rem 3rem;
-  }
-
-  .hospitality {
+  .videoBanner {
     flex-direction: column;
-    gap: 1rem;
-    padding: 3rem 3rem;
-  }
-  .hospitalityTitle {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .hospitalityRoom svg {
-    max-width: 100%;
-    height: min-content;
-    padding: 2rem 0rem;
-  }
-
-  .housesMap {
-    content: url("/src/Assets/hospitality_map_mobile.svg");
-    padding: 0.25rem 0.5rem;
-  }
-
-  .casaBaete,
-  .casaBruxa,
-  .casaCaju,
-  .casaCamua,
-  .casaDecker,
-  .casaRio,
-  .casaSal {
-    display: none;
-  }
-
-  .cardReserva {
-    width: 100%;
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .cardReservaMobile {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  .cardButtons {
-    display: block;
-  }
-
-  .piawood {
-    flex-direction: column-reverse;
-    padding: 1rem 3rem;
-    align-items: center;
-  }
-
-  .piawoodImg svg {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .piaWoodEstatisticas {
-    display: flex;
-    padding: 0rem 3rem;
-    max-width: 100%;
-  }
-
-  .piaWoodEstatisticas svg {
-    width: 100%;
-    height: auto;
-  }
-
-  .eventsSpace {
-    display: none;
-  }
-
-  .events {
-    display: flex;
-    padding: 3rem 1rem;
-    max-width: 100%;
-    align-items: flex-start;
-    margin-top: 3rem;
-  }
-
-  .eventsImg {
-    display: block;
-    width: 100%;
-  }
-
-  .eventsImgMobile {
-    display: none;
-  }
-
-  .yellowFilme {
-    flex-direction: column-reverse;
-    background-color: var(--color-orange-accent);
-    background-image: none;
-    padding: 3rem 1rem;
-    gap: 3rem;
-  }
-
-  .yellowFilmeImg svg {
-    width: 100%;
-    height: min-content;
   }
 }
