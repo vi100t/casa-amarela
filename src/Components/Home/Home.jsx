@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styles from "./Home.module.css";
 import Header from "../Utils/Header";
 import Divider from "../Utils/Divider";
@@ -84,6 +84,48 @@ const Home = () => {
   const scrollToSection = (index) => {
     sectionRefs.current[index].scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const yellowFilmeSection = document.querySelector(`.${styles.yellowFilme}`);
+    const leftCurtain = document.querySelector(`.${styles.leftCurtain}`);
+    const rightCurtain = document.querySelector(`.${styles.rightCurtain}`);
+    const content = document.querySelector(`.${styles.curtainContent}`);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Ensure curtains are closed initially
+            leftCurtain.style.transform = `translateX(0)`;
+            rightCurtain.style.transform = `translateX(0)`;
+            content.classList.remove(styles.visible);
+
+            // Start the animation to open the curtains
+            setTimeout(() => {
+              leftCurtain.style.transform = `translateX(-100%)`;
+              rightCurtain.style.transform = `translateX(100%)`;
+              content.classList.add(styles.visible);
+            }, 100); // Delay to ensure the initial state is applied
+          } else {
+            leftCurtain.style.transform = `translateX(0)`;
+            rightCurtain.style.transform = `translateX(0)`;
+            content.classList.remove(styles.visible);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    if (yellowFilmeSection) {
+      observer.observe(yellowFilmeSection);
+    }
+
+    return () => {
+      if (yellowFilmeSection) {
+        observer.unobserve(yellowFilmeSection);
+      }
+    };
+  }, []);
 
   return (
     <div onWheel={handleScroll} className={`${styles.home} container`}>
@@ -291,29 +333,35 @@ const Home = () => {
         id="yellowFilme"
         className={`${styles.parallax} ${styles.yellowFilme} ${styles.section}`}
       >
-        <div className={styles.yellowFilmeImg}>
-          <LogoSea />
-        </div>
-        <div className={styles.hospitalityInfo}>
-          <div className={styles.hospitalityTitle}>
-            <Label
-              label="Yellow Filme"
-              type="orange"
-              icon={LogoLabelOrange}
-              border="squareRound"
-            />
+        <div className={styles.curtainContainer}>
+          <div className={`${styles.curtain} ${styles.leftCurtain}`}></div>
+          <div className={`${styles.curtain} ${styles.rightCurtain}`}></div>
+          <div className={styles.curtainContent}>
+            <div className={styles.yellowFilmeImg}>
+              <LogoSea />
+            </div>
+            <div className={styles.hospitalityInfo}>
+              <div className={styles.hospitalityTitle}>
+                <Label
+                  label="Yellow Filme"
+                  type="orange"
+                  icon={LogoLabelOrange}
+                  border="squareRound"
+                />
+              </div>
+              <TextContent
+                type="blackBrown"
+                content="A Yellow Filme é a produtora audiovisual da Casa Amarela, focada em promover as atividades do hub cultural Piawood e do projeto de hospitalidade. A empresa atua em duas frentes: produção interna, criando conteúdos para divulgação e marketing, e serviços externos, oferecendo expertise local para marcas que buscam produções na região do Piauí. Com um foco regional, a Yellow Filme valoriza a cultura, os talentos e os cenários locais, criando conteúdos autênticos e de alto impacto visual."
+                maxCharacters="maxCharacters30"
+              />
+              <Hyperlink
+                color="orange"
+                label="Saiba mais sobre a Yellow Film"
+                href="/YellowFilm"
+                arrowColor="arrowOrange"
+              />
+            </div>
           </div>
-          <TextContent
-            type="blackBrown"
-            content="A Yellow Filme é a produtora audiovisual da Casa Amarela, focada em promover as atividades do hub cultural Piawood e do projeto de hospitalidade. A empresa atua em duas frentes: produção interna, criando conteúdos para divulgação e marketing, e serviços externos, oferecendo expertise local para marcas que buscam produções na região do Piauí. Com um foco regional, a Yellow Filme valoriza a cultura, os talentos e os cenários locais, criando conteúdos autênticos e de alto impacto visual."
-            maxCharacters="maxCharacters30"
-          />
-          <Hyperlink
-            color="orange"
-            label="Saiba mais sobre a Yellow Film"
-            href="/YellowFilm"
-            arrowColor="arrowOrange"
-          />
         </div>
       </section>
       <section
@@ -324,6 +372,7 @@ const Home = () => {
         <img src="src/Assets/video_banner.png" alt="Video Banner" />
         <Footer labelColor="yellowWhite" />
       </section>
+      <Footer labelColor="yellowWhite" />
     </div>
   );
 };
