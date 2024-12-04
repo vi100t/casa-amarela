@@ -192,7 +192,7 @@
 
 .casaAmarelaBarrinha {
   position: absolute;
-  top: 29%;
+  top: -15%;
   left: -7rem;
 }
 
@@ -202,6 +202,10 @@
   flex-direction: column;
   gap: 1.5rem;
   justify-content: center;
+}
+
+.casaAmarelaDiv {
+  position: relative;
 }
 
 .hospitalityInfo {
@@ -690,7 +694,6 @@
     flex-direction: column-reverse;
     background-color: var(--color-orange-accent);
     background-image: none;
-    
   }
 
   .yellowFilmeImg svg {
