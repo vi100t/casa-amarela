@@ -6,7 +6,7 @@
 
 body {
   margin: 0px;
-  
+
   --type-first: 'Futura Std', sans-serif;
   --type-second: 'League Gothic';
   --type-third: 'SF Pro Display', , sans-serif;;
@@ -27,6 +27,9 @@ body {
   --color-brown: #210600;
 
   --c1: #FFF;
+  --c2: #E0E0E0;
+  --c3: #CCC;
+  --c4: #585858;
   --c5: #1E1E1E;
   --c6: #000;
   color: var(--c1);
@@ -51,7 +54,27 @@ button, input {
 }
 
 .container {
-  max-width: 100rem;
-  padding: 0.25rem 1rem;
+  /* max-width: 100rem; */
+  padding: 0.25rem 0rem;
   margin: 0 auto;
+}
+
+.activeLink {
+  color: var(--color-yellow);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 100rem;
+    padding: 0.25rem 0.5rem;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+
 }

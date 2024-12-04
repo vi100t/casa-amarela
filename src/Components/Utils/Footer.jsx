@@ -6,51 +6,55 @@ import WhatsAppIcon from '../../Assets/whatsapp_icon.svg?react';
 import InstagramIcon from '../../Assets/instagram_icon.svg?react';
 import TwitterIcon from '../../Assets/twitter_icon.svg?react';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Label from './Label';
 import Divider from './Divider';
 
-const Footer = () => {
+const Footer = (props) => {
   return (
-    <div className={styles.footer}>
-      <LogoFooter />
+    <div className={`${styles.footer} ${styles[props.backgroundColor]}`}>
+      <div className={styles.logoFooter}>
+        <LogoFooter />
+      </div>
       <div className={styles.linkGroup}>
-        <Link className={styles.link}>
+        <NavLink className={styles.link} to="/HospitalityHospedagem">
           Hospitality
           <ArrowRightFooter />
-        </Link>
-        <Link className={styles.link}>
+        </NavLink>
+        <NavLink className={styles.link} to="/Piawood">
           Piawood
           <ArrowRightFooter />
-        </Link>
-        <Link className={styles.link}>
+        </NavLink>
+        <NavLink className={styles.link} to="/YellowFilme">
           Yellow Filme
           <ArrowRightFooter />
-        </Link>
-        <Link className={styles.link}>
+        </NavLink>
+        <NavLink className={styles.link} to="/Informacoes">
           Informações
           <ArrowRightFooter />
-        </Link>
+        </NavLink>
       </div>
       <div className={styles.labelGroup}>
-        <Label
+       <a href="http://Wa.me/5586999866447"><Label
           label="WhatsApp"
-          type="yellowWhite"
+          type={props.labelColor}
           icon={WhatsAppIcon}
           size="small"
-        />
+          border="square"
+          clickable="clickable"
+        /></a>
+        <a href="https://www.instagram.com/casaamarelapiaui?igsh=ZWN3eWRtd3hlaGdh">
+
         <Label
           label="Instagram"
-          type="yellowWhite"
+          type={props.labelColor}
           icon={InstagramIcon}
           size="small"
+          border="square"
+          clickable="clickable"
         />
-        <Label
-          label="Twitter"
-          type="yellowWhite"
-          icon={TwitterIcon}
-          size="small"
-        />
+        </a>
+        
       </div>
     </div>
   );

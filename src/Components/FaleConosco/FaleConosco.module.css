@@ -1,0 +1,144 @@
+.faleConosco {
+  display: flex;
+  padding: 0 6rem;
+  position: relative;
+  flex-direction: column;
+}
+
+.entreEmContato{
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  position: relative;
+}
+
+.experienciaAut {
+  display: flex;
+  padding: 6rem 9rem;
+  background-color: var(--color-yellow);
+  justify-content: center;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  position: relative;
+}
+
+.entreEmContatoImg{
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+}
+
+.entreEmContatoImgMobile{
+  display: none;
+}
+
+.labelGroup {
+  display: flex;
+  gap: .5rem;
+  flex-direction: column;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .faleConosco {
+    flex-direction: column-reverse;
+    padding: 0rem 3rem;
+    gap: 2rem;
+  }
+  .entreEmContato{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    position: relative;
+  }
+  .labelGroup {
+    display: flex;
+    gap: .5rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .entreEmContatoImg{
+    display: none;
+  }
+  .entreEmContatoImgMobile{
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    top: 48%;
+  }
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  .experienciaAut {
+    padding: 2.5rem 0.75rem;
+    position: relative;
+    margin-top: 18rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .faleConosco {
+    flex-direction: column-reverse;
+    padding: 0rem 3rem;
+    gap: 2rem;
+  }
+  .entreEmContato{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+  }
+  .labelGroup {
+    display: flex;
+    gap: .5rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .entreEmContatoImg{
+    display: none;
+  }
+  .entreEmContatoImgMobile{
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    top: 48%;
+  }
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  .experienciaAut {
+    margin-top: 5rem;
+  }
+  .experienciaAut {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding: 2.5rem 0.75rem;
+    position: relative;
+  }
+  .experienciaAutImg {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}

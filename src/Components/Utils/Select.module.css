@@ -1,0 +1,63 @@
+.input {
+  border: 1px solid hsla(0, 0%, 0%, 0.3);
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  position: relative;
+}
+
+.input {
+  background-color: var(--c1);
+	background-repeat: no-repeat;
+	background-size: 1rem auto;
+	background-position: 1rem center;
+}
+
+.star {
+  background-image: url("src/Assets/icon_star.svg");
+}
+
+.calendar {
+  background-image: url("src/Assets/icon_calendar.svg");
+}
+
+.moon {
+  background-image: url("src/Assets/icon_moon.svg");
+}
+
+.logo {
+  background-image: url("src/Assets/icon_logo.svg");
+}
+
+
+::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: 0.75rem;
+}
+:-moz-placeholder {
+  font-style: italic; 
+  font-size: 0.75rem; 
+}
+::-moz-placeholder {
+  font-style: italic;  
+  font-size: 0.75rem;
+}
+:-ms-input-placeholder {  
+  font-style: italic; 
+  font-size: 0.75rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
+    letter-spacing: 0.05rem;
+  }
+  .input {
+    border-radius: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .input {
+    border-radius: 0.75rem;
+  }
+}

@@ -1,18 +1,44 @@
 .header {
+  width: 100%;
   position: absolute;
-  width: fit-content;
-  top: 0.75rem;
+  top: 1.25rem;
   left: 0; 
   right: 0; 
   margin-inline: auto; 
+  max-width: 100rem;
+  z-index: 9999;
+}
+
+.backgroundWhite {
+  background-color: var(--c1);
+  margin-top: -1rem;
+  padding: 2rem !important;
+  top: 0;
 }
 
 .nav {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  text-wrap: nowrap;
+  padding: 0rem 3rem;
+  align-items: center;
+}
+
+.mobile {
+  display: none;
+  justify-content: space-between;
   align-items: center;
   text-wrap: nowrap;
-  gap: 13.5rem;
+}
+
+.logoMobile {
+  display: flex;
+  justify-content: center;
+}
+
+.logoMobile svg {
+  width: 100%;
 }
 
 a {
@@ -28,4 +54,216 @@ a {
   padding: 0.5rem 1.5rem;
   gap: 1.5rem;
   color: var(--c1);
+}
+
+.mobileMenu {
+  display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .header {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .nav {
+    display: none !important;
+  }
+
+  .mobile {
+    display: flex !important;
+  }
+
+  .mobileMenu {
+    display: none;
+    position: fixed;
+    background-color: #00000099;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    z-index: 999;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: minmax(max-content, 60vw) 1fr;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .mobileMenuOpen {
+    display: block;
+  }
+
+  .mobileNav {
+    grid-row: 2 / -1;
+    background-color: var(--c1);
+    color: var(--c4);
+    font-size: 1rem;
+  }
+
+  .mobileNavMenu li {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--c3);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobileMenu header {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--color-yellow);
+    opacity: 1;
+    height: min-content;
+    padding: 1.5rem;
+    align-items: center;
+  }
+
+  .closeBtn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 3rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: var(--c1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .header {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .nav {
+    display: none !important;
+  }
+  .mobile {
+    display: flex !important;
+  }
+  .mobileMenu {
+    display: none;
+    position: fixed;
+    background-color: #00000099;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    z-index: 999;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: minmax(max-content, 60vw) 1fr;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .mobileMenuOpen {
+    display: block;
+  }
+
+  .mobileNav {
+    grid-row: 2 / -1;
+    background-color: var(--c1);
+    color: var(--c4);
+    font-size: 1rem;
+  }
+
+  .mobileNavMenu li {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--c3);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobileMenu header {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--color-yellow);
+    opacity: 1;
+    height: min-content;
+    padding: 1.5rem;
+    align-items: center;
+  }
+
+  .closeBtn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 3rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: var(--c1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .header {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .nav {
+    display: none !important;
+  }
+  .mobile {
+    display: flex !important;
+  }
+  .mobileMenu {
+    display: none;
+    position: fixed;
+    background-color: #00000099;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    z-index: 999;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: minmax(max-content, 60vw) 1fr;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .mobileMenuOpen {
+    display: block;
+  }
+
+  .mobileNav {
+    grid-row: 2 / -1;
+    background-color: var(--c1);
+    color: var(--c4);
+    font-size: 1rem;
+  }
+
+  .mobileNavMenu li {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--c3);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobileMenu header {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--color-yellow);
+    opacity: 1;
+    height: min-content;
+    padding: 1.5rem;
+    align-items: center;
+  }
+
+  .closeBtn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 3rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: var(--c1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

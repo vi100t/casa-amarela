@@ -24,11 +24,30 @@
   color: var(--color-green);
 }
 
+.brown {
+  color: var(--color-brown);
+}
 
 .bigger {
   font-size: 6rem;
 }
 
+.small {
+  font-size: 2rem;
+}
+
 .smaller {
   font-size: 1.5rem;
+}
+
+.left {
+  text-align: start !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    text-wrap:nowrap;
+  }
 }

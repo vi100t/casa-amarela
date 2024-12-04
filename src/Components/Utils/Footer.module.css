@@ -19,6 +19,7 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  font-weight: 700;
 }
 
 .labelGroup {
@@ -26,4 +27,36 @@
   flex-direction: row;
   justify-content: center;
   gap: 1rem;
+}
+
+.redAccent {
+  background-color: var(--color-red-accent);
+}
+
+.blue {
+  background-color: var(--color-blue);
+}
+
+@media only screen and (max-width: 600px) {
+
+  .footer {
+    gap: 2rem;
+    padding: 3rem 1rem;
+  }
+  .linkGroup {
+    font-size: 0.75rem;
+    gap: 1rem;
+  }
+  .logoFooter  {
+    display: flex;
+    justify-content: center;
+
+  }
+  .logoFooter svg {
+    width: 65%;
+  }
+
+  .redAccent {
+    background-color: var(--color-red-accent-2);
+  }
 }

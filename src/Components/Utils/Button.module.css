@@ -2,15 +2,36 @@
   text-wrap: nowrap;
   border-radius: 2rem;
   padding: 0.5rem 1.5rem;
-  border: 0px;
   text-transform: uppercase;
   font-weight: 500;
   font-family: inherit;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  gap: 0.50rem;
+  align-items: center;
+  font-size: 0.75rem;
+  justify-content: center;
 }
 
 .red {
   background-color: var(--color-red);
   color: var(--color-red-accent);
+}
+
+.redWhite {
+  background-color: var(--color-red);
+  color: var(--c1);
+}
+
+.orangeAccent {
+  background-color: var(--color-orange-accent);
+  color: var(--color-orange);
+}
+
+.orange {
+  background-color: var(--color-orange);
+  color: var(--color-orange-accent);
 }
 
 .blue {
@@ -23,7 +44,18 @@
   color: var(--color-green-accent);
 }
 
+.greenBlue {
+  background-color: var(--color-green);
+  color: var(--color-blue);
+}
+
 .yellow {
   background-color: var(--color-yellow);
   color: var(--color-yellow-accent);
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
+    letter-spacing: 0.05rem;
+  }
 }

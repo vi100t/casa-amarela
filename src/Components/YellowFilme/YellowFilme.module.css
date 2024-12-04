@@ -1,0 +1,589 @@
+.yellowFilme {
+  padding: 0rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+.yellowFilmeHist {
+  padding: 3rem 6rem;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 16rem;
+}
+
+.yellowFilmePerfil {
+  padding: 9rem 6rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background: var(--color-orange);
+  position: relative;
+}
+
+.yellowFilePerfilContent {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.yellowFilmeCamera img{
+  width: 100%;
+}
+
+.yellowFilmeImg {
+  display: flex;
+}
+
+.yellowFilmeImg svg {
+  position: absolute;
+  top: -45%;
+}
+
+.yellowFilmeMissao {
+  display: grid;
+    gap: 3rem;
+    padding: 3rem 6rem;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.yellowFilmeMissaoItem {
+  max-width: 50ch;
+  color: var(--c6);
+  display: flex;
+  gap: 1rem;
+}
+
+.yellowFilmeMissaoItem > div {
+  opacity: 88%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.yellowFilmeMissaoItem > div > div{
+  opacity: 65%;
+}
+
+.yellowFilmesCardsGroup {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 3rem 6rem;
+  justify-content: center;
+}
+
+.yellowFilmesCards {
+  background-color: var(--c1);
+  border: 1px solid var(--c2);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  width: 10rem;
+  height: 10.5rem;
+  padding: 2.5rem 1.5rem;
+  font-weight: 500;
+  color: var(--c6);
+  justify-content: center;
+}
+
+.yellowFilmesCards svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.videoBanner {
+  margin-top: 0.75rem;
+  padding: 1rem 1rem;
+  margin-bottom: .25rem;
+  width: 100%;
+}
+
+.videoBanner img {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.equipe {
+  margin: 1rem;
+  background-color: var(--color-red-accent);
+  padding: 3rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  border-radius: 1rem;
+  margin-bottom: .25rem;
+  color: var(--c6);
+  font-weight: 500;
+  font-size: 1.50rem;
+}
+
+.membrosEquipe {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.75rem;
+  flex-direction: row;
+}
+
+.membroEquipe {
+  display: flex;
+  gap: .75rem;
+  font-size: 0.75rem;
+  flex-direction: column;
+  width: 100%;
+}
+
+.opacity65 {
+  opacity: 65%;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .desktop {
+    display: none;
+  }
+
+  .yellowFilme {
+    padding: 0rem .5rem;
+  }
+
+  .yellowFilmeHist {
+    padding: 3rem 2.5rem 1rem;
+    margin-bottom: 13rem;
+    color: var(--c6);
+  }
+
+  .yellowFilmePerfil {
+    padding: 14rem 3rem 6rem;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    background: var(--color-orange);
+    position: relative;
+    margin-bottom: 0;
+    justify-items: center;
+    justify-content: center;
+  }
+  
+  .yellowFilePerfilContent {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .yellowFilmeCamera img {
+
+  }
+  
+  .yellowFilmeImg {
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: -25%;
+    position: absolute;
+    justify-content: center;
+  }
+  
+  .yellowFilmeImg svg {
+    width: 80%;
+    height: min-content;
+  }
+  .yellowFilmeMissao {
+    padding: 3rem 1rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .yellowFilmeMissaoItem {
+    max-width: 50ch;
+    color: var(--c6);
+    display: flex;
+    gap: 1rem;
+  }
+
+  .yellowFilmesCardsGroup {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2.5rem .5rem;
+    justify-content: center;
+  }
+  
+  .yellowFilmesCards {
+    border-radius: 1rem;
+    gap: .5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: .75rem .75rem;
+    font-size: 0.60rem;
+    text-align: center;
+    text-wrap: nowrap;
+    height: 100%;
+  }
+  
+  .yellowFilmesCards svg {
+    width: 1.50rem;
+    height: 1.50rem;
+  }
+
+  .videoBanner {
+    padding: 1rem .5rem;
+    width: 100%;
+  }
+  
+  .videoBanner img {
+    border-radius: 1rem;
+    width: 100%;
+  }
+
+  .equipe {
+    margin: .5rem;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 3rem 1rem;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    margin-bottom: .25rem;
+    color: var(--c6);
+    font-weight: 500;
+    font-size: 1.50rem;
+  }
+
+  .membrosEquipe {
+    flex-direction: column;
+  }
+
+  .membroEquipe {
+    text-align: start;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .membroEquipeImg {
+    width: 100%;
+  }
+
+  .membroEquipeDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 20ch;
+    font-size: 1rem;
+  }
+
+  .opacity65 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .mobile {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .desktop {
+    display: none;
+  }
+
+  .yellowFilme {
+    padding: 0rem .5rem;
+  }
+
+  .yellowFilmeHist {
+    padding: 3rem 2.5rem 1rem;
+    margin-bottom: 13rem;
+    color: var(--c6);
+  }
+
+  .yellowFilmePerfil {
+    padding: 14rem 3rem 6rem;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    background: var(--color-orange);
+    position: relative;
+    margin-bottom: 0;
+    justify-items: center;
+    justify-content: center;
+  }
+  
+  .yellowFilePerfilContent {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .yellowFilmeCamera {
+  }
+  
+  .yellowFilmeImg {
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: -25%;
+    position: absolute;
+    justify-content: center;
+  }
+  
+  .yellowFilmeImg svg {
+    width: 80%;
+    height: min-content;
+  }
+  .yellowFilmeMissao {
+    padding: 3rem 1rem;
+  }
+  
+  .yellowFilmeMissaoItem {
+    max-width: 50ch;
+    color: var(--c6);
+    display: flex;
+    gap: 1rem;
+  }
+
+  .yellowFilmesCardsGroup {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2.5rem .5rem;
+    justify-content: center;
+  }
+  
+  .yellowFilmesCards {
+    border-radius: 1rem;
+    gap: .5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: .75rem .75rem;
+    font-size: 0.60rem;
+    text-align: center;
+    text-wrap: nowrap;
+    height: 100%;
+  }
+  
+  .yellowFilmesCards svg {
+    width: 1.50rem;
+    height: 1.50rem;
+  }
+
+  .videoBanner {
+    padding: 1rem .5rem;
+    width: 100%;
+  }
+  
+  .videoBanner img {
+    border-radius: 1rem;
+    width: 100%;
+  }
+
+  .equipe {
+    margin: .5rem;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 3rem 1rem;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    margin-bottom: .25rem;
+    color: var(--c6);
+    font-weight: 500;
+    font-size: 1.50rem;
+  }
+
+  .membrosEquipe {
+    flex-direction: column;
+  }
+
+  .membroEquipe {
+    text-align: start;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .membroEquipeImg {
+    width: 100%;
+  }
+
+  .membroEquipeDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 20ch;
+    font-size: 1rem;
+  }
+
+  .opacity65 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .mobile {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .desktop {
+    display: none;
+  }
+
+  .yellowFilme {
+    padding: 0rem .5rem;
+  }
+
+  .yellowFilmeHist {
+    padding: 3rem 2.5rem 1rem;
+    margin-bottom: 13rem;
+    color: var(--c6);
+  }
+
+  .yellowFilmePerfil {
+    padding: 14rem 3rem 6rem;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    background: var(--color-orange);
+    position: relative;
+    margin-bottom: 0;
+    justify-items: center;
+    justify-content: center;
+  }
+  
+  .yellowFilePerfilContent {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .yellowFilmeCamera {
+  }
+  
+  .yellowFilmeImg {
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: -25%;
+    position: absolute;
+    justify-content: center;
+  }
+  
+  .yellowFilmeImg svg {
+    width: 80%;
+    height: min-content;
+  }
+  .yellowFilmeMissao {
+    padding: 3rem 1rem;
+  }
+  
+  .yellowFilmeMissaoItem {
+    max-width: 50ch;
+    color: var(--c6);
+    display: flex;
+    gap: 1rem;
+  }
+
+  .yellowFilmesCardsGroup {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2.5rem .5rem;
+    justify-content: center;
+  }
+  
+  .yellowFilmesCards {
+    border-radius: 1rem;
+    gap: .5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: .75rem .75rem;
+    font-size: 0.60rem;
+    text-align: center;
+    text-wrap: nowrap;
+    height: 100%;
+  }
+  
+  .yellowFilmesCards svg {
+    width: 1.50rem;
+    height: 1.50rem;
+  }
+
+  .videoBanner {
+    padding: 1rem .5rem;
+    width: 100%;
+  }
+  
+  .videoBanner img {
+    border-radius: 1rem;
+    width: 100%;
+  }
+
+  .equipe {
+    margin: .5rem;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 3rem 1rem;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    margin-bottom: .25rem;
+    color: var(--c6);
+    font-weight: 500;
+    font-size: 1.50rem;
+  }
+
+  .membrosEquipe {
+    flex-direction: column;
+  }
+
+  .membroEquipe {
+    text-align: start;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .membroEquipeImg {
+    width: 100%;
+  }
+
+  .membroEquipeDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 20ch;
+    font-size: 1rem;
+  }
+
+  .opacity65 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
